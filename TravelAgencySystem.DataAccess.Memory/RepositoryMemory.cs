@@ -2,7 +2,7 @@ using TravelAgencySystem.Database.Memory;
 
 namespace TravelAgencySystem.DataAccess.Abstractions;
 
-public abstract class RepositoryMemory<T, TKeyID> : IRepository<T, TKeyID>
+public abstract class RepositoryMemory<T> : IRepository<T>
 {
     protected MemoryDbContext _dbContext;
 
@@ -12,7 +12,7 @@ public abstract class RepositoryMemory<T, TKeyID> : IRepository<T, TKeyID>
     }
 
     public abstract void Add(T entity);
-    public abstract T? Get(TKeyID id);
+    public abstract T? Get(Guid id);
     public abstract IQueryable<T> Query();
     public abstract void Remove(T entity);
 }

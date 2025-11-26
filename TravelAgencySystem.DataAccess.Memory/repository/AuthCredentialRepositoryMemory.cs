@@ -4,7 +4,7 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class AuthCredentialRepositoryMemory : RepositoryMemory<AuthCredential, Guid>
+public class AuthCredentialRepositoryMemory : RepositoryMemory<AuthCredential>
 {
     public AuthCredentialRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
 

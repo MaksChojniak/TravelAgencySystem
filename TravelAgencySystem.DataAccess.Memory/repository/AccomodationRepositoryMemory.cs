@@ -4,7 +4,7 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class AccomodationRepository : RepositoryMemory<Accomodation, Guid>
+public class AccomodationRepository : RepositoryMemory<Accomodation>
 {
     public AccomodationRepository(MemoryDbContext dbContext) : base(dbContext) { }
 

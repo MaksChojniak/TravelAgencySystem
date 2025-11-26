@@ -1,9 +1,9 @@
 namespace TravelAgencySystem.DataAccess.Abstractions;
 
-public interface IRepository<T, TKeyID>
+public interface IRepository<T>
 {
     IQueryable<T> Query();
-    T? Get(TKeyID id);
+    T? Get(Guid id);
     void Add(T entity);
     void Remove(T entity);
 }

@@ -4,7 +4,7 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class CarrierRepositoryMemory : RepositoryMemory<Carrier, Guid>
+public class CarrierRepositoryMemory : RepositoryMemory<Carrier>
 {
     public CarrierRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
 
