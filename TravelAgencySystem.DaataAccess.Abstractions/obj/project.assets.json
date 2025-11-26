@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Abstractions\\TravelAgencySystem.Abstractions.csproj",
-      "projectName": "TravelAgencySystem.Abstractions",
-      "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Abstractions\\TravelAgencySystem.Abstractions.csproj",
+      "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DaataAccess.Abstractions\\TravelAgencySystem.DaataAccess.Abstractions.csproj",
+      "projectName": "TravelAgencySystem.DaataAccess.Abstractions",
+      "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DaataAccess.Abstractions\\TravelAgencySystem.DaataAccess.Abstractions.csproj",
       "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Abstractions\\obj\\",
+      "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DaataAccess.Abstractions\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
