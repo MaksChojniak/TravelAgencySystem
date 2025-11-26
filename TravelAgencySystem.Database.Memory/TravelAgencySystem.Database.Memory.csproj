@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgencySystem.Database.Abstractions\TravelAgencySystem.Database.Abstractions.csproj" />
+    <ProjectReference Include="..\TravelAgencySystem.DataModel\TravelAgencySystem.DataModel.csproj" />
+  </ItemGroup>
+
 </Project>

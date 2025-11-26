@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TravelAgencySystem.DataAccess")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a699b3b9e43598a67e6c8e2b9699207ab105fb7c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50a7b05f3ed5cc9c7e51bc80e80e5524068087fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("TravelAgencySystem.DataAccess")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TravelAgencySystem.DataAccess")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
