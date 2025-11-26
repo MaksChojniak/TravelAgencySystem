@@ -4,7 +4,7 @@ namespace TravelAgencySystem.Services.Abstractions;
 
 public interface IClientService
 {
-    Guid Create();
+    Guid Create(string firstName, string lastName, string pesel, string phoneNumber, string email, string address);
     Client? Get(Guid id);
     IReadOnlyList<Client> GetAll();
 }

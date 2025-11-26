@@ -2,7 +2,7 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.Services.Abstractions;
 
-public interface IAuthService<T>
+public interface IAuthService<T> where T : Person, new()
 {
     T? Login(string username, string password);
     T? CreateAccount(string username, string password);

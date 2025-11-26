@@ -4,7 +4,7 @@ namespace TravelAgencySystem.Services.Abstractions;
 
 public interface ICarrierService
 {
-    Guid Create();
+    Guid Create(string name, TypeOfTransport type, int spaceCount, string startPlace, string returnPlace);
     Carrier? Get(Guid id);
     IReadOnlyList<Carrier> GetAll();
 }

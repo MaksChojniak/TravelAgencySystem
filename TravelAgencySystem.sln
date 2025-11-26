@@ -17,7 +17,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.Database
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.Services.Abstractions", "TravelAgencySystem.Services.Abstractions\TravelAgencySystem.Services.Abstractions.csproj", "{B46986AC-0AFD-4F4B-AA91-519BF137B52D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.Services.Memory", "TravelAgencySystem.Services.Memory\TravelAgencySystem.Services.Memory.csproj", "{31FFB1BA-FC22-4909-94B6-2DB6C90ACFBD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.Services", "TravelAgencySystem.Services\TravelAgencySystem.Services.csproj", "{31FFB1BA-FC22-4909-94B6-2DB6C90ACFBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
