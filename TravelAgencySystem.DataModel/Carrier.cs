@@ -1,22 +1,22 @@
-﻿namespace ProjectApp.DataModel
+﻿namespace TravelAgencySystem.DataModel;
+
+public class Carrier
 {
-    public class Carrier
-    {
-        public Guid Id { get; set; }
-        public string Name { get; set; }
-        public TypeOfTransport Type { get; set; }
-        public int FreeSpaces { get; set; }
-        public int SpaceCount { get; set; }
-        public string StartPlace { get; set; }
-        public string ReturnPlace { get; set; }
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public TypeOfTransport Type { get; set; }
+    public int FreeSpaces { get; set; }
+    public int SpaceCount { get; set; }
+    public string StartPlace { get; set; }
+    public string ReturnPlace { get; set; }
 
-    }
-
-    public enum TypeOfTransport
-    {
-        Plane,
-        Train,
-        Bus,
-        Boat
-    }
 }
+
+public enum TypeOfTransport
+{
+    Plane,
+    Train,
+    Bus,
+    Boat
+}
+
