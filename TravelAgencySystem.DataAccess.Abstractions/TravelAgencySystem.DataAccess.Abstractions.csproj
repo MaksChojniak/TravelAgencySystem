@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\TravelAgencySystem.Database.Memory\TravelAgencySystem.Database.Memory.csproj" />
+    <ProjectReference Include="..\TravelAgencySystem.DataModel\TravelAgencySystem.DataModel.csproj" />
   </ItemGroup>
 
 </Project>

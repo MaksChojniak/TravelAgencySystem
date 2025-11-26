@@ -5,6 +5,9 @@
       "TravelAgencySystem.Database.Abstractions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/TravelAgencySystem.Database.Abstractions.dll": {}
         },

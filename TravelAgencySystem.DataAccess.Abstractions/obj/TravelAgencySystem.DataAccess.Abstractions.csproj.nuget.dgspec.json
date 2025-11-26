@@ -34,6 +34,9 @@
             "projectReferences": {
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj"
+              },
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               }
             }
           }
@@ -100,7 +103,11 @@
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

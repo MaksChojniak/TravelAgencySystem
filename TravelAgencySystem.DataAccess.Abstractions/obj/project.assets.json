@@ -5,6 +5,9 @@
       "TravelAgencySystem.Database.Abstractions/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/TravelAgencySystem.Database.Abstractions.dll": {}
         },
@@ -57,6 +60,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "TravelAgencySystem.DataModel >= 1.0.0",
       "TravelAgencySystem.Database.Memory >= 1.0.0"
     ]
   },
@@ -94,6 +98,9 @@
           "projectReferences": {
             "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj": {
               "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj"
+            },
+            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
             }
           }
         }

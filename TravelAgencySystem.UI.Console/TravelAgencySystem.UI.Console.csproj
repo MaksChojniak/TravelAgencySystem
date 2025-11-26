@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgencySystem.DataModel\TravelAgencySystem.DataModel.csproj" />
+    <ProjectReference Include="..\TravelAgencySystem.DataAccess.Abstractions\TravelAgencySystem.DataAccess.Abstractions.csproj" />
+    <ProjectReference Include="..\TravelAgencySystem.DataAccess.Memory\TravelAgencySystem.DataAccess.Memory.csproj" />
+    <ProjectReference Include="..\TravelAgencySystem.Database.Abstractions\TravelAgencySystem.Database.Abstractions.csproj" />
+    <ProjectReference Include="..\TravelAgencySystem.Database.Memory\TravelAgencySystem.Database.Memory.csproj" />
+  </ItemGroup>
+
 </Project>
