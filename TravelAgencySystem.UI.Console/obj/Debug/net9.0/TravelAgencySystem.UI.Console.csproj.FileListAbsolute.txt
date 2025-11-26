@@ -12,3 +12,4 @@ d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.
 d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.pdb
 d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.genruntimeconfig.cache
 d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\ref\TravelAgencySystem.UI.Console.dll
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.sourcelink.json

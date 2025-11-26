@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.DataMode
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.DataAccess", "TravelAgencySystem.DataAccess\TravelAgencySystem.DataAccess.csproj", "{B2F1EA2F-1CD4-4294-9EE9-B3D832832A6B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.DaataAccess.Abstractions", "TravelAgencySystem.DaataAccess.Abstractions\TravelAgencySystem.DaataAccess.Abstractions.csproj", "{3D4F06E5-9E99-45D1-A46E-27C5031E022C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelAgencySystem.DataAccess.Abstractions", "TravelAgencySystem.DataAccess.Abstractions\TravelAgencySystem.DataAccess.Abstractions.csproj", "{3D4F06E5-9E99-45D1-A46E-27C5031E022C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

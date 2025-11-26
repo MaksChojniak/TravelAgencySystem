@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TravelAgencySystem.DaataAccess.Abstractions")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+26b9595431bfbf9546b5aadaed44c91624dc3119")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a699b3b9e43598a67e6c8e2b9699207ab105fb7c")]
 [assembly: System.Reflection.AssemblyProductAttribute("TravelAgencySystem.DaataAccess.Abstractions")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TravelAgencySystem.DaataAccess.Abstractions")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
