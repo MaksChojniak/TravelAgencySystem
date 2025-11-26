@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\C#\\Politechniika\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\",
+  "WorkspaceRootPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8AC28C78-CD48-441A-BB7D-5B5800B88633}|TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj|d:\\projects\\c#\\politechniika\\projekt\\travelagencysystem\\travelagencysystem\\travelagencysystem.ui.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8AC28C78-CD48-441A-BB7D-5B5800B88633}|TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj|d:\\projects\\c#\\projekt\\travelagencysystem\\travelagencysystem\\travelagencysystem.ui.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8AC28C78-CD48-441A-BB7D-5B5800B88633}|TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj|solutionrelative:travelagencysystem.ui.console\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -72,11 +72,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\C#\\Politechniika\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\Program.cs",
+              "DocumentMoniker": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\Program.cs",
               "RelativeDocumentMoniker": "TravelAgencySystem.UI.Console\\Program.cs",
-              "ToolTip": "D:\\Projects\\C#\\Politechniika\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\Program.cs",
+              "ToolTip": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\Program.cs",
               "RelativeToolTip": "TravelAgencySystem.UI.Console\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T06:29:50.074Z",
               "EditorCaption": ""

@@ -1,6 +1,6 @@
 ﻿namespace TravelAgencySystem.DataModel;
 
-public class Person
+public abstract class Person
 {
     public Guid Id { get; set; }
     public string FirstName { get; set; }

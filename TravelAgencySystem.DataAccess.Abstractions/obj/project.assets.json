@@ -1,11 +1,64 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "TravelAgencySystem.Database.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/TravelAgencySystem.Database.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelAgencySystem.Database.Abstractions.dll": {}
+        }
+      },
+      "TravelAgencySystem.Database.Memory/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0",
+          "TravelAgencySystem.Database.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TravelAgencySystem.Database.Memory.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelAgencySystem.Database.Memory.dll": {}
+        }
+      },
+      "TravelAgencySystem.DataModel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/TravelAgencySystem.DataModel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelAgencySystem.DataModel.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "TravelAgencySystem.Database.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../TravelAgencySystem.Database.Abstractions/TravelAgencySystem.Database.Abstractions.csproj",
+      "msbuildProject": "../TravelAgencySystem.Database.Abstractions/TravelAgencySystem.Database.Abstractions.csproj"
+    },
+    "TravelAgencySystem.Database.Memory/1.0.0": {
+      "type": "project",
+      "path": "../TravelAgencySystem.Database.Memory/TravelAgencySystem.Database.Memory.csproj",
+      "msbuildProject": "../TravelAgencySystem.Database.Memory/TravelAgencySystem.Database.Memory.csproj"
+    },
+    "TravelAgencySystem.DataModel/1.0.0": {
+      "type": "project",
+      "path": "../TravelAgencySystem.DataModel/TravelAgencySystem.DataModel.csproj",
+      "msbuildProject": "../TravelAgencySystem.DataModel/TravelAgencySystem.DataModel.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "TravelAgencySystem.Database.Memory >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Maks\\.nuget\\packages\\": {},
@@ -38,7 +91,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj": {
+              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

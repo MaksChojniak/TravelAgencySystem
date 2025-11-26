@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TravelAgencySystem.Database.Memory\TravelAgencySystem.Database.Memory.csproj" />
+  </ItemGroup>
+
 </Project>
