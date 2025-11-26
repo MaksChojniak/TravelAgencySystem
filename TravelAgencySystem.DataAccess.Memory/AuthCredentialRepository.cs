@@ -4,9 +4,9 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class AuthCredentialRepositoryMemory : RepositoryMemory<AuthCredential>
+public class AuthCredentialRepository : Repository<AuthCredential>
 {
-    public AuthCredentialRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
+    public AuthCredentialRepository(MemoryDbContext dbContext) : base(dbContext) { }
 
     public override  IQueryable<AuthCredential> Query() => _dbContext.AuthCredentials.AsQueryable();
 

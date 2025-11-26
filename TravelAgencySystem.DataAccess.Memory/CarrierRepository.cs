@@ -4,9 +4,9 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class CarrierRepositoryMemory : RepositoryMemory<Carrier>
+public class CarrierRepository : Repository<Carrier>
 {
-    public CarrierRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
+    public CarrierRepository(MemoryDbContext dbContext) : base(dbContext) { }
 
     public override  IQueryable<Carrier> Query() => _dbContext.Carriers.AsQueryable();
 

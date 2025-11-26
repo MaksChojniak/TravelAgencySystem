@@ -4,9 +4,9 @@ using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class OffertRepositoryMemory : RepositoryMemory<Offert>
+public class OffertRepository : Repository<Offert>
 {
-    public OffertRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
+    public OffertRepository(MemoryDbContext dbContext) : base(dbContext) { }
 
     public override  IQueryable<Offert> Query() => _dbContext.Offerts.AsQueryable();
 

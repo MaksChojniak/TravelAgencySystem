@@ -2,11 +2,11 @@ using TravelAgencySystem.Database.Memory;
 
 namespace TravelAgencySystem.DataAccess.Abstractions;
 
-public abstract class RepositoryMemory<T> : IRepository<T>
+public abstract class Repository<T> : IRepository<T>
 {
     protected MemoryDbContext _dbContext;
 
-    public RepositoryMemory(MemoryDbContext dbContext) 
+    public Repository(MemoryDbContext dbContext) 
     {
         _dbContext = dbContext;
     }
