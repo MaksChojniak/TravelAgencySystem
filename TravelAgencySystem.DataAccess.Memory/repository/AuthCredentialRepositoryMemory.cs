@@ -1,27 +1,18 @@
 using TravelAgencySystem.DataAccess.Abstractions;
+using TravelAgencySystem.Database.Memory;
 using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class AuthCredentialRepository : IRepository<AuthCredential, Guid>
+public class AuthCredentialRepositoryMemory : RepositoryMemory<AuthCredential, Guid>
 {
-    public void Add(AuthCredential entity)
-    {
-        throw new NotImplementedException();
-    }
+    public AuthCredentialRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
 
-    public AuthCredential? Get(Guid id)
-    {
-        throw new NotImplementedException();
-    }
+    public override  IQueryable<AuthCredential> Query() => _dbContext.AuthCredentials.AsQueryable();
 
-    public IQueryable<AuthCredential> Query()
-    {
-        throw new NotImplementedException();
-    }
+    public override void Add(AuthCredential entity) => _dbContext.AuthCredentials.Add(entity);
 
-    public void Remove(AuthCredential entity)
-    {
-        throw new NotImplementedException();
-    }
+    public override void Remove(AuthCredential entity) => _dbContext.AuthCredentials.Remove(entity);
+
+    public override AuthCredential? Get(Guid id) => _dbContext.AuthCredentials.FirstOrDefault(e => e.PersonId == id);
 }

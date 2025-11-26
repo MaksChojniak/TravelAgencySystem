@@ -1,27 +1,18 @@
 using TravelAgencySystem.DataAccess.Abstractions;
+using TravelAgencySystem.Database.Memory;
 using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class CarrierRepository : IRepository<Carrier, Guid>
+public class CarrierRepositoryMemory : RepositoryMemory<Carrier, Guid>
 {
-    public void Add(Carrier entity)
-    {
-        throw new NotImplementedException();
-    }
+    public CarrierRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
 
-    public Carrier? Get(Guid id)
-    {
-        throw new NotImplementedException();
-    }
+    public override  IQueryable<Carrier> Query() => _dbContext.Carriers.AsQueryable();
 
-    public IQueryable<Carrier> Query()
-    {
-        throw new NotImplementedException();
-    }
+    public override void Add(Carrier entity) => _dbContext.Carriers.Add(entity);
 
-    public void Remove(Carrier entity)
-    {
-        throw new NotImplementedException();
-    }
+    public override void Remove(Carrier entity) => _dbContext.Carriers.Remove(entity);
+
+    public override Carrier? Get(Guid id) => _dbContext.Carriers.FirstOrDefault(e => e.Id == id);
 }

@@ -1,27 +1,18 @@
 using TravelAgencySystem.DataAccess.Abstractions;
+using TravelAgencySystem.Database.Memory;
 using TravelAgencySystem.DataModel;
 
 namespace TravelAgencySystem.DataAccess;
 
-public class EmployeeRepository : IRepository<Accomodation, Guid>
+public class EmployeeRepositoryMemory : RepositoryMemory<Employee, Guid>
 {
-    public void Add(Accomodation entity)
-    {
-        throw new NotImplementedException();
-    }
+    public EmployeeRepositoryMemory(MemoryDbContext dbContext) : base(dbContext) { }
 
-    public Accomodation? Get(Guid id)
-    {
-        throw new NotImplementedException();
-    }
+    public override  IQueryable<Employee> Query() => _dbContext.Employees.AsQueryable();
 
-    public IQueryable<Accomodation> Query()
-    {
-        throw new NotImplementedException();
-    }
+    public override void Add(Employee entity) => _dbContext.Employees.Add(entity);
 
-    public void Remove(Accomodation entity)
-    {
-        throw new NotImplementedException();
-    }
+    public override void Remove(Employee entity) => _dbContext.Employees.Remove(entity);
+
+    public override Employee? Get(Guid id) => _dbContext.Employees.FirstOrDefault(e => e.Id == id);
 }
