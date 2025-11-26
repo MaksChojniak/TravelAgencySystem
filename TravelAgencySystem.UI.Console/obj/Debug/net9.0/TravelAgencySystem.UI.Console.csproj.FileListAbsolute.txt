@@ -1,0 +1,14 @@
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.GeneratedMSBuildEditorConfig.editorconfig
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.AssemblyInfoInputs.cache
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.AssemblyInfo.cs
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.csproj.CoreCompileInputs.cache
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\bin\Debug\net9.0\TravelAgencySystem.UI.Console.exe
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\bin\Debug\net9.0\TravelAgencySystem.UI.Console.deps.json
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\bin\Debug\net9.0\TravelAgencySystem.UI.Console.runtimeconfig.json
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\bin\Debug\net9.0\TravelAgencySystem.UI.Console.dll
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\bin\Debug\net9.0\TravelAgencySystem.UI.Console.pdb
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.dll
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\refint\TravelAgencySystem.UI.Console.dll
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.pdb
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\TravelAgencySystem.UI.Console.genruntimeconfig.cache
+d:\Projects\C#\Projekt\TravelAgencySystem\TravelAgencySystem\TravelAgencySystem.UI.Console\obj\Debug\net9.0\ref\TravelAgencySystem.UI.Console.dll
