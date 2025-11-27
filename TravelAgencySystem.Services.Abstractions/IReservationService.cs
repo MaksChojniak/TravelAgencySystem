@@ -7,4 +7,5 @@ public interface IReservationService
     Guid Create(Guid personId, Guid offertId);
     Reservation? Get(Guid id);
     IReadOnlyList<Reservation> GetAll();
+    void Update(Guid id, Guid? personId, Guid? offertId);
 }

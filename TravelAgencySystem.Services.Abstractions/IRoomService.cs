@@ -7,4 +7,5 @@ public interface IRoomService
     Guid Create(Guid accomodationId, Guid reservationId, int floor, int number, int spaceCount, double price);
     Room? Get(Guid id);
     IReadOnlyList<Room> GetAll();
+    void Update(Guid id, Guid? accomodationId, Guid? reservationId, int? floor, int? number, int? spaceCount, double? price);
 }

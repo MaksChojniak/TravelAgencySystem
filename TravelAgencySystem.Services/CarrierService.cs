@@ -47,13 +47,22 @@ public class CarrierService : ICarrierService
         return carrier.Id;
     }
 
-    public Carrier? Get(Guid id)
+    public Carrier? Get(Guid id) => _carriers.Get(id);
+
+    public IReadOnlyList<Carrier> GetAll() => _carriers.Query().ToList();
+
+    public void Update(Guid id, string? name, TypeOfTransport? type, int? spaceCount, string? startPlace, string? returnPlace)
     {
-        throw new NotImplementedException();
+        if(Get(id) is not Carrier carrier)
+            throw new ArgumentException("Carrier is not exist", nameof(carrier));
+
+        carrier.Name = name ?? carrier.Name;
+        carrier.Type = type ?? carrier.Type;
+        carrier.SpaceCount = spaceCount ?? carrier.SpaceCount;
+        carrier.StartPlace = startPlace ?? carrier.StartPlace;
+        carrier.ReturnPlace = returnPlace ?? carrier.ReturnPlace;
+
+        _dbContext.SaveChanges();
     }
 
-    public IReadOnlyList<Carrier> GetAll()
-    {
-        throw new NotImplementedException();
-    }
 }

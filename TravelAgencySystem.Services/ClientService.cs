@@ -21,13 +21,25 @@ public class ClientService : IClientService
         throw new NotImplementedException();
     }
 
-    public Client? Get(Guid id)
+    public Client? Get(Guid id) => _clients.Get(id);
+
+    public IReadOnlyList<Client> GetAll() => _clients.Query().ToList();
+
+    public bool Exist(Guid id) => _clients.Query().Any(e => e.Id == id);
+
+    public void Update(Guid id, string? firstName, string? lastName, string? pesel, string? phoneNumber, string? email, string? address)
     {
-        throw new NotImplementedException();
+        if(Get(id) is not Client client)
+            throw new ArgumentException("Client is not exist", nameof(client));
+
+        client.FirstName = firstName ?? client.FirstName;
+        client.LastName = lastName ?? client.LastName;
+        client.Pesel = pesel ?? client.Pesel;
+        client.PhoneNumber = phoneNumber ?? client.PhoneNumber;
+        client.Email = email ?? client.Email;
+        client.Address = address ?? client.Address;
+
+        _dbContext.SaveChanges();
     }
 
-    public IReadOnlyList<Client> GetAll()
-    {
-        throw new NotImplementedException();
-    }
 }

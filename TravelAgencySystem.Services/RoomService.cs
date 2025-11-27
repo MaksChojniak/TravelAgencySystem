@@ -22,13 +22,23 @@ public class RoomService : IRoomService
         throw new NotImplementedException();
     }
 
-    public Room? Get(Guid id)
+    public Room? Get(Guid id) => _rooms.Get(id);
+
+    public IReadOnlyList<Room> GetAll() => _rooms.Query().ToList();
+
+    public void Update(Guid id, Guid? accomodationId, Guid? reservationId, int? floor, int? number, int? spaceCount, double? price)
     {
-        throw new NotImplementedException();
+        if(Get(id) is not Room room)
+            throw new ArgumentException("Room is not exist", nameof(room));
+
+        room.AccomodationId = accomodationId ?? room.AccomodationId;
+        room.ReservationId = reservationId ?? room.ReservationId;
+        room.Floor = floor ?? room.Floor;
+        room.Number = number ?? room.Number;
+        room.SpaceCount = spaceCount ?? room.SpaceCount;
+        room.Price = price ?? room.Price;
+
+        _dbContext.SaveChanges();
     }
 
-    public IReadOnlyList<Room> GetAll()
-    {
-        throw new NotImplementedException();
-    }
 }

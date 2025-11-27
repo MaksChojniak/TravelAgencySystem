@@ -43,13 +43,19 @@ public class AccomodationService : IAccomodationService
         return accomodation.Id;
     }
 
-    public Accomodation? Get(Guid id)
-    {
-        throw new NotImplementedException();
-    }
+    public Accomodation? Get(Guid id) => _accomodations.Get(id);
 
-    public IReadOnlyList<Accomodation> GetAll()
+    public IReadOnlyList<Accomodation> GetAll() => _accomodations.Query().ToList();
+
+    public void Update(Guid id, string? name, string? address, int? stars)
     {
-        throw new NotImplementedException();
+        if(Get(id) is not Accomodation accomodation)
+            throw new ArgumentException("Accomodation is not exist", nameof(accomodation));
+
+        accomodation.Name = name ?? accomodation.Name;
+        accomodation.Address = address ?? accomodation.Address;
+        accomodation.Stars = stars ?? accomodation.Stars;
+
+        _dbContext.SaveChanges();
     }
 }

@@ -66,6 +66,34 @@
         "runtime": {
           "bin/placeholder/TravelAgencySystem.DataModel.dll": {}
         }
+      },
+      "TravelAgencySystem.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "TravelAgencySystem.DataAccess.Abstractions": "1.0.0",
+          "TravelAgencySystem.DataModel": "1.0.0",
+          "TravelAgencySystem.Services.Abstractions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TravelAgencySystem.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelAgencySystem.Services.dll": {}
+        }
+      },
+      "TravelAgencySystem.Services.Abstractions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/TravelAgencySystem.Services.Abstractions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/TravelAgencySystem.Services.Abstractions.dll": {}
+        }
       }
     }
   },
@@ -94,6 +122,16 @@
       "type": "project",
       "path": "../TravelAgencySystem.DataModel/TravelAgencySystem.DataModel.csproj",
       "msbuildProject": "../TravelAgencySystem.DataModel/TravelAgencySystem.DataModel.csproj"
+    },
+    "TravelAgencySystem.Services/1.0.0": {
+      "type": "project",
+      "path": "../TravelAgencySystem.Services/TravelAgencySystem.Services.csproj",
+      "msbuildProject": "../TravelAgencySystem.Services/TravelAgencySystem.Services.csproj"
+    },
+    "TravelAgencySystem.Services.Abstractions/1.0.0": {
+      "type": "project",
+      "path": "../TravelAgencySystem.Services.Abstractions/TravelAgencySystem.Services.Abstractions.csproj",
+      "msbuildProject": "../TravelAgencySystem.Services.Abstractions/TravelAgencySystem.Services.Abstractions.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -102,7 +140,9 @@
       "TravelAgencySystem.DataAccess.Memory >= 1.0.0",
       "TravelAgencySystem.DataModel >= 1.0.0",
       "TravelAgencySystem.Database.Abstractions >= 1.0.0",
-      "TravelAgencySystem.Database.Memory >= 1.0.0"
+      "TravelAgencySystem.Database.Memory >= 1.0.0",
+      "TravelAgencySystem.Services >= 1.0.0",
+      "TravelAgencySystem.Services.Abstractions >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -151,6 +191,12 @@
             },
             "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
               "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+            },
+            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services.Abstractions\\TravelAgencySystem.Services.Abstractions.csproj": {
+              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services.Abstractions\\TravelAgencySystem.Services.Abstractions.csproj"
+            },
+            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services\\TravelAgencySystem.Services.csproj": {
+              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services\\TravelAgencySystem.Services.csproj"
             }
           }
         }

@@ -22,13 +22,19 @@ public class ReservationService : IReservationService
         throw new NotImplementedException();
     }
 
-    public Reservation? Get(Guid id)
+    public Reservation? Get(Guid id) => _reservation.Get(id);
+
+    public IReadOnlyList<Reservation> GetAll() => _reservation.Query().ToList();
+
+    public void Update(Guid id, Guid? personId, Guid? offertId)
     {
-        throw new NotImplementedException();
+        if(Get(id) is not Reservation reservation)
+            throw new ArgumentException("Reservation is not exist", nameof(reservation));
+
+        reservation.PersonId = personId ?? reservation.PersonId;
+        reservation.OffertId = offertId ?? reservation.OffertId;
+
+        _dbContext.SaveChanges();
     }
 
-    public IReadOnlyList<Reservation> GetAll()
-    {
-        throw new NotImplementedException();
-    }
 }
