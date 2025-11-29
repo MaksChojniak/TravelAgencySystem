@@ -19,25 +19,40 @@ public class OffertService : IOffertService
 
     public Guid Create(Guid hostId, DateTime date, TimeSpan duration, Guid carrierId, Guid accomodationId)
     {
-        throw new NotImplementedException();
+        // throw new NotImplementedException();
+        Offert offert = new()
+        {
+            Id = Guid.NewGuid(),
+
+            HostEmployeeId = hostId,
+            Date = date,
+            Duration = duration,
+            CarrierId = carrierId,
+            AccomodationId = accomodationId
+        };
+
+        _offerts.Add(offert);
+        _dbContext.SaveChanges();
+
+        return offert.Id;
     }
 
     public Offert? Get(Guid id) => _offerts.Get(id);
 
     public IReadOnlyList<Offert> GetAll() => _offerts.Query().ToList();
 
-    public IReadOnlyList<Offert> Search<TKey>((DateTime min, DateTime max)? dateRange = null, Func<Offert, TKey>? keySelector = null)
-    {
-        var list = GetAll();
+    // public IReadOnlyList<Offert> Search<TKey>((DateTime min, DateTime max)? dateRange = null, Func<Offert, TKey>? keySelector = null)
+    // {
+    //     var list = GetAll();
         
-        if(dateRange.HasValue)
-            list = list.Where(e => dateRange.Value.min <= e.Date && e.Date <= dateRange.Value.max).ToList();
+    //     if(dateRange.HasValue)
+    //         list = list.Where(e => dateRange.Value.min <= e.Date && e.Date <= dateRange.Value.max).ToList();
 
-        if(keySelector is not null)
-            list.OrderBy(keySelector);
+    //     if(keySelector is not null)
+    //         list.OrderBy(keySelector);
 
-        return list;
-    }
+    //     return list;
+    // }
 
     public void Update(Guid id, Guid? hostId, DateTime? date, TimeSpan? duration, Guid? carrierId, Guid? accomodationId)
     {

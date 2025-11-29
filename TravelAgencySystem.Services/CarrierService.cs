@@ -16,19 +16,22 @@ public class CarrierService : ICarrierService
         _dbContext = dbContext;
     }
 
-    public Guid Create(string name, TypeOfTransport type, int spaceCount, string startPlace, string returnPlace)
+    public Guid Create(string name, TypeOfTransport type, int spaceCount, string startPlace, string returnPlace, double price)
     {
         if(string.IsNullOrEmpty(name))
             throw new ArgumentException("Name is required", nameof(name));
 
         if(spaceCount <= 0)
             throw new ArgumentException("Space Count must be greater than 0", nameof(name));
-
+        
         if(string.IsNullOrEmpty(startPlace))
             throw new ArgumentException("Name is required", nameof(name));
 
         if(string.IsNullOrEmpty(returnPlace))
             throw new ArgumentException("Name is required", nameof(name));
+
+        if(price <= 0)
+            throw new ArgumentException("Price must be greater than 0", nameof(price));
 
         Carrier carrier = new()
         {
@@ -38,7 +41,8 @@ public class CarrierService : ICarrierService
             Type = type,
             SpaceCount = spaceCount,
             StartPlace = startPlace,
-            ReturnPlace = returnPlace
+            ReturnPlace = returnPlace,
+            Price = price
         };
 
         _carriers.Add(carrier);
@@ -51,7 +55,7 @@ public class CarrierService : ICarrierService
 
     public IReadOnlyList<Carrier> GetAll() => _carriers.Query().ToList();
 
-    public void Update(Guid id, string? name, TypeOfTransport? type, int? spaceCount, string? startPlace, string? returnPlace)
+    public void Update(Guid id, string? name, TypeOfTransport? type, int? spaceCount, string? startPlace, string? returnPlace, double? price)
     {
         if(Get(id) is not Carrier carrier)
             throw new ArgumentException("Carrier is not exist", nameof(carrier));
@@ -61,6 +65,7 @@ public class CarrierService : ICarrierService
         carrier.SpaceCount = spaceCount ?? carrier.SpaceCount;
         carrier.StartPlace = startPlace ?? carrier.StartPlace;
         carrier.ReturnPlace = returnPlace ?? carrier.ReturnPlace;
+        carrier.Price = price ?? carrier.Price;
 
         _dbContext.SaveChanges();
     }

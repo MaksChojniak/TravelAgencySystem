@@ -19,7 +19,23 @@ public class RoomService : IRoomService
 
     public Guid Create(Guid accomodationId, Guid reservationId, int floor, int number, int spaceCount, double price)
     {
-        throw new NotImplementedException();
+        // throw new NotImplementedException();
+        Room room = new()
+        {
+            Id = Guid.NewGuid(),
+            
+            ReservationId = reservationId,
+            IsAvaiable = reservationId == Guid.Empty,
+            AccomodationId = accomodationId,
+            Number = number,
+            Floor = floor,
+            SpaceCount = spaceCount,
+            Price = price
+        };
+        _rooms.Add(room);
+        _dbContext.SaveChanges();
+
+        return room.Id;
     }
 
     public Room? Get(Guid id) => _rooms.Get(id);

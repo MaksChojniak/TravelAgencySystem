@@ -8,6 +8,7 @@ public class Carrier
     public int SpaceCount { get; set; }
     public string StartPlace { get; set; }
     public string ReturnPlace { get; set; }
+    public double Price { get; set; }
 
 }
 

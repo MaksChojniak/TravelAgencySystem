@@ -7,14 +7,137 @@
   "targets": {
     ".NETCoreApp,Version=v9.0": {
       "TravelAgencySystem.UI.Console/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataAccess.Abstractions": "1.0.0",
+          "TravelAgencySystem.DataAccess.Memory": "1.0.0",
+          "TravelAgencySystem.DataModel": "1.0.0",
+          "TravelAgencySystem.Database.Abstractions": "1.0.0",
+          "TravelAgencySystem.Database.Memory": "1.0.0",
+          "TravelAgencySystem.Services": "1.0.0",
+          "TravelAgencySystem.Services.Abstractions": "1.0.0"
+        },
         "runtime": {
           "TravelAgencySystem.UI.Console.dll": {}
+        }
+      },
+      "TravelAgencySystem.DataAccess.Abstractions/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0",
+          "TravelAgencySystem.Database.Memory": "1.0.0"
+        },
+        "runtime": {
+          "TravelAgencySystem.DataAccess.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TravelAgencySystem.DataAccess.Memory/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataAccess.Abstractions": "1.0.0",
+          "TravelAgencySystem.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "TravelAgencySystem.DataAccess.Memory.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TravelAgencySystem.Database.Abstractions/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "TravelAgencySystem.Database.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TravelAgencySystem.Database.Memory/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0",
+          "TravelAgencySystem.Database.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "TravelAgencySystem.Database.Memory.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TravelAgencySystem.DataModel/1.0.0": {
+        "runtime": {
+          "TravelAgencySystem.DataModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TravelAgencySystem.Services/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataAccess.Abstractions": "1.0.0",
+          "TravelAgencySystem.DataModel": "1.0.0",
+          "TravelAgencySystem.Services.Abstractions": "1.0.0"
+        },
+        "runtime": {
+          "TravelAgencySystem.Services.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "TravelAgencySystem.Services.Abstractions/1.0.0": {
+        "dependencies": {
+          "TravelAgencySystem.DataModel": "1.0.0"
+        },
+        "runtime": {
+          "TravelAgencySystem.Services.Abstractions.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       }
     }
   },
   "libraries": {
     "TravelAgencySystem.UI.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.DataAccess.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.DataAccess.Memory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.Database.Abstractions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.Database.Memory/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.DataModel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "TravelAgencySystem.Services.Abstractions/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
