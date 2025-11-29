@@ -28,6 +28,10 @@ IOffertService offertService = new OffertService(offertRepository, db);
 IReservationService reservationService = new ReservationService(reservationRepository, db);
 IRoomService roomService = new RoomService(roomRepository, db);
 
+DataSeeder seeder = new(accomodationService, clientAuthService, employeeAuthService, bookingService, carrierService, clientService, employeeService,
+                        offertService, reservationService, roomService);
+seeder.Seed();
+
 PageManager.Pages = new()
 {
     ["menu"] = new MenuPage(),
@@ -51,40 +55,6 @@ PageManager.Pages = new()
     // ["Menu"] = new MenuPage(),
 
 };
-
-Session.PersonId = employeeAuthService.CreateAccount("m", "m").Id;
-employeeService.Update(Session.PersonId, "Maks", "Chojnia", "000", 1500);
-
-var carrier1 = carrierService.Create("PKP IC", TypeOfTransport.Train, 100, "Warszawa", "Czestochowa", 50);
-var carrier2 = carrierService.Create("LOT", TypeOfTransport.Plane, 100, "Wroclaw", "Warszawa", 500);
-
-var accomodation1 = accomodationService.Create("Akademik Blizniak", "Czestochowa ul.akademicka 1", 1);
-var accomodation2 = accomodationService.Create("Grand Hotel", "Gdansk ul.nieznana 15", 5);
-var accomodation3 = accomodationService.Create("Most Ponatowski", "Warszawa ul....", 1);
-
-roomService.Create(accomodation1, Guid.Empty, 1, 129, 2, 501);
-roomService.Create(accomodation1, Guid.Empty, 2, 220, 2, 502);
-
-roomService.Create(accomodation2, Guid.Empty, 3, 31, 4, 5520);
-roomService.Create(accomodation2, Guid.Empty, 3, 30, 5, 5200);
-
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(5), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(1), carrier1, accomodation3);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(2), carrier1, accomodation2);
-
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(3), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(4), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(6), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(7), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(8), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(9), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(9), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(9), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(9), carrier1, accomodation1);
-offertService.Create(Session.PersonId, DateTime.Now, TimeSpan.FromDays(9), carrier1, accomodation1);
-
-Session.PersonId = clientAuthService.CreateAccount("maks", "maks").Id;
-clientService.Update(Session.PersonId, "Maks", "Chojnia", "000", "+48 536-597-300", "maks@gmail", "wiatrakkebab");
 
 PageManager.LoadPage("menu");
 

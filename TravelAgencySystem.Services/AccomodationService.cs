@@ -30,6 +30,9 @@ public class AccomodationService : IAccomodationService
         if(  stars < 1 || 5 < stars)
             throw new ArgumentException("Stars is out of range [1,5] ", nameof(stars));
 
+        if(_accomodations.Query().Any(a => a.Name == name && a.Address == address))
+            throw new ArgumentException("That Accomodation exist");
+
         Accomodation accomodation = new()
         {
             Id = Guid.NewGuid(),
@@ -62,5 +65,13 @@ public class AccomodationService : IAccomodationService
         accomodation.Stars = stars ?? accomodation.Stars;
 
         _dbContext.SaveChanges();
+    }
+
+    public void Remove(Guid id)
+    {
+        if(Get(id) is not Accomodation accomodation)
+            throw new ArgumentException("Accomodation is not exist", nameof(accomodation));
+
+        _accomodations.Remove(accomodation);
     }
 }
