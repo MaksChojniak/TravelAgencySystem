@@ -3,7 +3,7 @@ using TravelAgencySystem.Services.Abstractions;
 
 public class EmployeeLogin : PageBase
 {
-    readonly IAuthService<Employee> _authService;
+    readonly IAuthService _authService;
 
     string _login;
     string _password;
@@ -25,7 +25,7 @@ public class EmployeeLogin : PageBase
         };
     }
 
-    public EmployeeLogin(IAuthService<Employee> authService) : base()
+    public EmployeeLogin(IAuthService authService) : base()
     {
         _authService = authService;
     }
@@ -36,7 +36,7 @@ public class EmployeeLogin : PageBase
 
         try
         {
-            Session.PersonId = _authService.Login(_login, _password).Id;
+            Session.PersonId = _authService.Login(_login, _password).PersonId;
             PageManager.LoadPage("employee-home");
         }
         catch(AuthException exc)

@@ -5,7 +5,7 @@ public class Room
     public Guid Id { get; set; }
     public Guid AccomodationId { get; set; }
     public Guid ReservationId { get; set; }
-    public bool IsAvaiable { get; set; }
+    public bool IsAvailable { get; set; }
     public int Floor {  get; set; }
     public int Number {  get; set; }
     public int SpaceCount { get; set; }

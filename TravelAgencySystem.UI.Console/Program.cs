@@ -18,12 +18,12 @@ IRepository<Reservation> reservationRepository = new ReservationRepository(db);
 IRepository<Room> roomRepository = new RoomRepository(db);
 
 IAccomodationService accomodationService = new AccomodationService(accomodationRepository, roomRepository, db);
-IAuthService<Client> clientAuthService = new AuthService<Client>(authCredentialRepository, clientRepository, db);
-IAuthService<Employee> employeeAuthService = new AuthService<Employee>(authCredentialRepository, employeeRepository, db);
+IAuthService clientAuthService = new AuthService<Client>(authCredentialRepository, clientRepository, db);
+IAuthService employeeAuthService = new AuthService<Employee>(authCredentialRepository, employeeRepository, db);
 ICarrierService carrierService = new CarrierService(carrierRepository, db);
 IClientService clientService = new ClientService(clientRepository, reservationRepository, db);
 IEmployeeService employeeService = new EmployeeService(employeeRepository, db);
-IOffertService offertService = new OffertService(offertRepository, reservationRepository, carrierRepository, accomodationRepository, roomRepository, db);
+IOffertService offertService = new OffertService(offertRepository, employeeRepository, reservationRepository, carrierRepository, accomodationRepository, roomRepository, db);
 IReservationService reservationService = new ReservationService(reservationRepository, offertRepository, clientRepository, roomRepository, db);
 IRoomService roomService = new RoomService(roomRepository, accomodationRepository, reservationRepository, db);
 

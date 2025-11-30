@@ -31,10 +31,13 @@ public class ReservationService : IReservationService
         if(_offerts.Get(offertId) is null)
             throw new ArgumentException("Offert not exist", nameof(offertId));
 
+        if(roomIds.Count <= 0)
+            throw new ArgumentException("No rooms selected", nameof(roomIds));
+
         if(roomIds.Any(roomId => _rooms.Get(roomId) is null))
             throw new ArgumentException("Some rooms not exist", nameof(roomIds));
 
-        if(roomIds.Any(roomId => !_rooms.Get(roomId).IsAvaiable))
+        if(roomIds.Any(roomId => !_rooms.Get(roomId).IsAvailable))
             throw new ArgumentException("Some rooms not avaiable", nameof(roomIds));
 
         if(_reservation.Query().Any(r => r.ClientId == clientId && r.OffertId == offertId))
@@ -53,7 +56,7 @@ public class ReservationService : IReservationService
         foreach(var roomId in roomIds)
         {
             var room = _rooms.Get(roomId);
-            room.IsAvaiable = false;
+            room.IsAvailable = false;
             room.ReservationId = reservation.Id;
         }
         
@@ -82,7 +85,7 @@ public class ReservationService : IReservationService
         foreach(var roomId in _rooms.Query().Where(r => r.Id == reservation.OffertId).Select(r => r.Id))
         {
             var room = _rooms.Get(roomId);
-            room.IsAvaiable = true;
+            room.IsAvailable = true;
             room.ReservationId = Guid.Empty;
         }
         _reservation.Remove(reservation);

@@ -7,6 +7,7 @@ namespace TravelAgencySystem.Services.Abstractions;
 public class OffertService : IOffertService
 {
     readonly IRepository<Offert> _offerts;
+    readonly IRepository<Employee> _employees;
     readonly IRepository<Reservation> _reservations;
     readonly IRepository<Carrier> _carriers;
     readonly IRepository<Accomodation> _accomodations;
@@ -14,9 +15,10 @@ public class OffertService : IOffertService
 
     readonly IDbContext _dbContext;
 
-    public OffertService(IRepository<Offert> offerts, IRepository<Reservation> reservations, IRepository<Carrier> carriers, IRepository<Accomodation> accomodations, IRepository<Room> rooms, IDbContext dbContext)
+    public OffertService(IRepository<Offert> offerts, IRepository<Employee> employees, IRepository<Reservation> reservations, IRepository<Carrier> carriers, IRepository<Accomodation> accomodations, IRepository<Room> rooms, IDbContext dbContext)
     {
         _offerts = offerts;
+        _employees = employees;
         _reservations = reservations;
         _carriers = carriers;
         _accomodations = accomodations;
@@ -27,10 +29,13 @@ public class OffertService : IOffertService
 
     public Guid Create(Guid hostId, string title, DateTime date, TimeSpan duration, Guid carrierId, Guid accomodationId)
     {
+        if(_employees.Get(hostId) is null)
+            throw new ArgumentException("Employee not exist", nameof(hostId));
+
         if(string.IsNullOrWhiteSpace(title))
             throw new ArgumentException("Title is empty", nameof(title));
 
-        if(date < DateTime.Now)
+        if(date.Date < DateTime.Now.Date)
             throw new ArgumentException("Date must be in future", nameof(date));
 
         if(duration.TotalDays <= 0)
@@ -94,7 +99,7 @@ public class OffertService : IOffertService
         if(Get(id) is not Offert offert)
             throw new ArgumentException("Offert not exist", nameof(offert));
 
-        int freeRoomSpaces = _rooms.Query().Where(r => r.AccomodationId == offert.AccomodationId && r.IsAvaiable).Sum(r => r.SpaceCount);
+        int freeRoomSpaces = _rooms.Query().Where(r => r.AccomodationId == offert.AccomodationId && r.IsAvailable).Sum(r => r.SpaceCount);
         int freeCarrierSpaces = _carriers.Get(offert.CarrierId).SpaceCount - _reservations.Query().Where(r => _offerts.Get(r.OffertId).CarrierId == offert.CarrierId).Sum(r => r.NumberOfPeople);
 
         int freeSpaces = Math.Min(freeRoomSpaces, freeCarrierSpaces);

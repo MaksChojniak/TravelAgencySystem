@@ -6,8 +6,8 @@ namespace TravelAgencySystem.Services;
 public sealed class DataSeeder : IDataSeeder
 {
     readonly IAccomodationService _accomodationService;
-    readonly IAuthService<Client> _clientAuthService;
-    readonly IAuthService<Employee> _employeeAuthService;
+    readonly IAuthService _clientAuthService;
+    readonly IAuthService _employeeAuthService;
     readonly ICarrierService _carrierService;
     readonly IClientService _clientService;
     readonly IEmployeeService _employeeService;
@@ -15,7 +15,7 @@ public sealed class DataSeeder : IDataSeeder
     readonly IReservationService _reservationService;
     readonly IRoomService _roomService;
 
-    public DataSeeder(IAccomodationService accomodationService, IAuthService<Client> clientAuthService, IAuthService<Employee> employeeAuthService, ICarrierService carrierService, 
+    public DataSeeder(IAccomodationService accomodationService, IAuthService clientAuthService, IAuthService employeeAuthService, ICarrierService carrierService, 
         IClientService clientService, IEmployeeService employeeService, IOffertService offertService, IReservationService reservationService, IRoomService roomService)
     {
         _accomodationService = accomodationService;
@@ -78,44 +78,46 @@ public sealed class DataSeeder : IDataSeeder
         var room18 = _roomService.Create(accomodation4, null, 2, 236, 2, 415);
 
 
-        var offert1 = _offertService.Create(employee1.Id, "Train Offert To Czestochowa", DateTime.Now.AddDays(1), TimeSpan.FromDays(5), carrier1, accomodation1);
-        var offert2 = _offertService.Create(employee3.Id, "Train Offert To Sczecin", DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation1);
-        var offert3 = _offertService.Create(employee4.Id, "Best Deal Train Offert To Szczecin", DateTime.Now.AddDays(14), TimeSpan.FromDays(2), carrier3, accomodation1);
+        var offert1 = _offertService.Create(employee1, "Train Offert To Czestochowa", DateTime.Now.AddDays(1), TimeSpan.FromDays(5), carrier1, accomodation1);
+        var offert2 = _offertService.Create(employee3, "Train Offert To Sczecin", DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation1);
+        var offert3 = _offertService.Create(employee4, "Best Deal Train Offert To Szczecin", DateTime.Now.AddDays(14), TimeSpan.FromDays(2), carrier3, accomodation1);
 
-        var offert4 = _offertService.Create(employee4.Id, "Travel to the best Hotel", DateTime.Now.AddDays(22), TimeSpan.FromDays(7), carrier4, accomodation2);
-        var offert5 = _offertService.Create(employee1.Id, "Luxurious Rest on the beach", DateTime.Now.AddDays(1), TimeSpan.FromDays(4), carrier2, accomodation2);
+        var offert4 = _offertService.Create(employee4, "Travel to the best Hotel", DateTime.Now.AddDays(22), TimeSpan.FromDays(7), carrier4, accomodation2);
+        var offert5 = _offertService.Create(employee1, "Luxurious Rest on the beach", DateTime.Now.AddDays(1), TimeSpan.FromDays(4), carrier2, accomodation2);
 
-        var offert6 = _offertService.Create(employee3.Id, "Fast and Cheap to Gdansk", DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation3);
-        var offert7 = _offertService.Create(employee3.Id, "Last Minute Offert to Czestochowa", DateTime.Now.AddDays(16), TimeSpan.FromDays(5), carrier1, accomodation3);
+        var offert6 = _offertService.Create(employee3, "Fast and Cheap to Gdansk", DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation3);
+        var offert7 = _offertService.Create(employee3, "Last Minute Offert to Czestochowa", DateTime.Now.AddDays(16), TimeSpan.FromDays(5), carrier1, accomodation3);
 
-        var offert8 = _offertService.Create(employee4.Id, "Best offert To Czestochowa", DateTime.Now.AddDays(7), TimeSpan.FromDays(5), carrier1, accomodation4);
-        var offert9 = _offertService.Create(employee1.Id, "Travel From Poznan to Szczecin", DateTime.Now.AddDays(10), TimeSpan.FromDays(4), carrier4, accomodation4);
-        var offert10 = _offertService.Create(employee2.Id, "Offert Plain to Szczecin", DateTime.Now.AddDays(3), TimeSpan.FromDays(5), carrier2, accomodation4);
-
-
-        // var reservation1 = _reservationService.Create()
+        var offert8 = _offertService.Create(employee4, "Best offert To Czestochowa", DateTime.Now.AddDays(7), TimeSpan.FromDays(5), carrier1, accomodation4);
+        var offert9 = _offertService.Create(employee1, "Travel From Poznan to Szczecin", DateTime.Now.AddDays(10), TimeSpan.FromDays(4), carrier4, accomodation4);
+        var offert10 = _offertService.Create(employee2, "Offert Plain to Szczecin", DateTime.Now.AddDays(3), TimeSpan.FromDays(5), carrier2, accomodation4);
 
 
-        _employeeService.Update(employee1.Id, "Maks", "Chojnia", "00000000000", 1500);
-        _employeeService.Update(employee2.Id, "Anna", "Nowak", "11111111111", 1600);
-        _employeeService.Update(employee3.Id, "Piotr", "Zalewski", "22222222222", 1700);
-        _employeeService.Update(employee4.Id, "Kasia", "Kowal", "33333333333", 1400);
+        var reservation1 = _reservationService.Create(client1, offert1, new List<Guid> { room1, room2 });
+        var reservation2 = _reservationService.Create(client1, offert10, new List<Guid> { room15 });
+        var reservation3 = _reservationService.Create(client2, offert5, new List<Guid> { room5 });
 
-        _clientService.Update(client1.Id, "Jan", "Kowalski", "90010112345", "+48 600-111-222", "jan.k@example.com", "Warszawa, ul. Przykladowa 1");
-        _clientService.Update(client2.Id, "Ewa", "Nowak", "88020254321", "+48 600-333-444", "ewa.n@example.com", "Krakow, ul. Testowa 2");
-        _clientService.Update(client3.Id, "Marek", "Lewandowski", "85030398765", "+48 600-555-666", "marek.l@example.com", "Gdansk, ul. Morska 3");
-        _clientService.Update(client4.Id, "Olga", "Wroblewska", "91040411122", "+48 600-777-888", "olga.w@example.com", "Wroclaw, ul. Rynek 4");
+
+        _employeeService.Update(employee1, "Maks", "Chojnia", "00000000000", 1500);
+        _employeeService.Update(employee2, "Anna", "Nowak", "11111111111", 1600);
+        _employeeService.Update(employee3, "Piotr", "Zalewski", "22222222222", 1700);
+        _employeeService.Update(employee4, "Kasia", "Kowal", "33333333333", 1400);
+
+        _clientService.Update(client1, "Jan", "Kowalski", "90010112345", "+48 600-111-222", "jan.k@example.com", "Warszawa, ul. Przykladowa 1");
+        _clientService.Update(client2, "Ewa", "Nowak", "88020254321", "+48 600-333-444", "ewa.n@example.com", "Krakow, ul. Testowa 2");
+        _clientService.Update(client3, "Marek", "Lewandowski", "85030398765", "+48 600-555-666", "marek.l@example.com", "Gdansk, ul. Morska 3");
+        _clientService.Update(client4, "Olga", "Wroblewska", "91040411122", "+48 600-777-888", "olga.w@example.com", "Wroclaw, ul. Rynek 4");
 
         return new()
         {
             Accomodations = new() { accomodation1, accomodation2, accomodation3, accomodation4 },
-            AuthCredentials = new() { employee1.Id, employee2.Id, employee3.Id, employee4.Id, client1.Id, 
-                                    client2.Id, client3.Id, client4.Id, },
+            AuthCredentials = new() { employee1, employee2, employee3, employee4, client1, 
+                                    client2, client3, client4, },
             Carriers = new() { carrier1, carrier2, carrier3, carrier4, },
-            Clients = new() { client1.Id, client2.Id, client3.Id, client4.Id},
-            Employees = new() { employee1.Id, employee2.Id, employee3.Id, employee4.Id },
+            Clients = new() { client1, client2, client3, client4},
+            Employees = new() { employee1, employee2, employee3, employee4 },
             Offerts = new() { offert1, offert2, offert3, offert4, offert5, offert6, offert7, offert8, offert9, offert10 },
-            // Reservations = new() {},
+            Reservations = new() { reservation1, reservation2, reservation3 },
             Rooms = new() { room1, room2, room3, room4, room5, room6, room7, room8, room9, room10, room11, room12,
                             room13, room14, room15, room16, room17, room18 }
         };

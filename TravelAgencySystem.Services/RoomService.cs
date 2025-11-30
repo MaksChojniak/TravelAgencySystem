@@ -43,7 +43,7 @@ public class RoomService : IRoomService
             Id = Guid.NewGuid(),
             
             ReservationId = reservationId ?? Guid.Empty,
-            IsAvaiable = reservationId == Guid.Empty,
+            IsAvailable = reservationId is null,
             AccomodationId = accomodationId,
             Number = number,
             Floor = floor,
@@ -78,7 +78,7 @@ public class RoomService : IRoomService
         if(Get(id) is not Room room)
             throw new ArgumentException("Room is not exist", nameof(room));
 
-        if(!room.IsAvaiable)
+        if(!room.IsAvailable)
             throw new InvalidOperationException("Room is not avaiable");
 
         _rooms.Remove(room);

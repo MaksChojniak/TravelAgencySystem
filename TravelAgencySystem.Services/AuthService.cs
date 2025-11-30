@@ -5,7 +5,7 @@ using System.Data.Common;
 
 namespace TravelAgencySystem.Services.Abstractions;
 
-public class AuthService<T> : IAuthService<T> where T : Person, new()
+public class AuthService<T> : IAuthService where T : Person, new()
 {
     readonly IRepository<AuthCredential> _credentials;
     readonly IRepository<T> _people;
@@ -19,7 +19,7 @@ public class AuthService<T> : IAuthService<T> where T : Person, new()
         _db = db;
     }
 
-    public T? CreateAccount(string username, string password)
+    public Guid CreateAccount(string username, string password)
     {
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             throw new AuthException(AuthErrorCode.EmptyUsernameOrPassword);
@@ -44,10 +44,10 @@ public class AuthService<T> : IAuthService<T> where T : Person, new()
         _people.Add(client);
         _db.SaveChanges();
 
-        return client;
+        return client.Id;
     }
 
-    public T? Login(string username, string password)
+    public AuthCredential? Login(string username, string password)
     {
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
             throw new AuthException(AuthErrorCode.EmptyUsernameOrPassword);
@@ -59,11 +59,7 @@ public class AuthService<T> : IAuthService<T> where T : Person, new()
         if (credential.Password != password)
             throw new AuthException(AuthErrorCode.WrongPassword);
 
-        T? person = _people.Get(credential.PersonId);
-        if(person is null)
-            throw new AuthException(AuthErrorCode.PersonNotExist);
-
-        return person;
+        return credential;
     }
 }
 

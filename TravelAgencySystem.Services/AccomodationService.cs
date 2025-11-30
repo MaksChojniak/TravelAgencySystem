@@ -53,7 +53,7 @@ public class AccomodationService : IAccomodationService
     public IReadOnlyList<Accomodation> GetAll() => _accomodations.Query().ToList();
 
     public IReadOnlyList<Room> GetRooms(Guid id) => _rooms.Query().Where(r => r.AccomodationId == id).ToList();
-    public IReadOnlyList<Room> GetAvaiableRooms(Guid id) => _rooms.Query().Where(r => r.AccomodationId == id && r.IsAvaiable).ToList();
+    public IReadOnlyList<Room> GetAvaiableRooms(Guid id) => _rooms.Query().Where(r => r.AccomodationId == id && r.IsAvailable).ToList();
 
     public void Update(Guid id, string? name, string? address, int? stars)
     {
