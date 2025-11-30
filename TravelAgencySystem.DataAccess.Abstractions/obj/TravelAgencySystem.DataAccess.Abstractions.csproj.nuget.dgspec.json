@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {}
+    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
+    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj",
+        "projectUniqueName": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj",
         "projectName": "TravelAgencySystem.DataAccess.Abstractions",
-        "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj",
+        "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj",
         "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\obj\\",
+        "outputPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

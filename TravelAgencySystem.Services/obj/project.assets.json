@@ -134,8 +134,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
-              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj"
+            "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
+              "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj"
             },
             "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
               "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
