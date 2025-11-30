@@ -42,7 +42,7 @@ public class InMemoryServicesFixture
         EmployeeAuthService = new AuthService<Employee>(authCredentialRepository, employeeRepository, db);
         CarrierService = new CarrierService(carrierRepository, db);
         ClientService = new ClientService(clientRepository, reservationRepository, db);
-        EmployeeService = new EmployeeService(employeeRepository, db);
+        EmployeeService = new EmployeeService(employeeRepository, offertRepository, db);
         OffertService = new OffertService(offertRepository, employeeRepository, reservationRepository, carrierRepository, accomodationRepository, roomRepository, db);
         ReservationService = new ReservationService(reservationRepository, offertRepository, clientRepository, roomRepository, db);
         RoomService = new RoomService(roomRepository,accomodationRepository, reservationRepository, db);

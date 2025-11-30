@@ -48,4 +48,15 @@ public class EmployeeServiceTests : IClassFixture<InMemoryServicesFixture>
     }
 #endregion
 
+#region GetHostedOfferts
+    [Fact]
+    public void GetHostedOfferts_Success()
+    {
+        var offerts = _employeeService.GetHostedOfferts(_seed.Employees[0]);
+
+        Assert.NotEmpty(offerts);
+        Assert.Contains(offerts, o => o.Id == _seed.Offerts[0]);
+    }
+#endregion
+
 }
