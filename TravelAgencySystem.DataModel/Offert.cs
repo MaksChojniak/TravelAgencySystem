@@ -3,7 +3,7 @@
 public class Offert
 {
     public Guid Id { get; set; }
-    public string? Title { get; set; }
+    public string Title { get; set; }
     public Guid HostEmployeeId { get; set; }
     public DateTime Date { get; set; }
     public TimeSpan Duration { get; set; }

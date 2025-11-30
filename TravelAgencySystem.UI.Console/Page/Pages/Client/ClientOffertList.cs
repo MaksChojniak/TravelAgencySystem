@@ -48,7 +48,7 @@ public class ClientOffertList : PageBase
     }
 
     List<TextLabel> GetOffertsAsLabels() => _offertService.GetAll()
-        .Select( (o,i) => new TextLabel($"- {i+1}. Offert ({o.Date.ToShortDateString()}-{(o.Date+o.Duration).ToShortDateString()})"))
+        .Select( (o,i) => new TextLabel($"- {i+1}.  \'{o.Title}\'     ({o.Date.ToShortDateString()}-{(o.Date+o.Duration).ToShortDateString()})"))
         .ToList();
 
     void OpenSelectOffert()

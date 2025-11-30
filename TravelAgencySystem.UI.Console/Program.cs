@@ -47,7 +47,7 @@ PageManager.Pages = new()
     ["client-set-register-data"] = new SetClientData(clientService),
     ["client-home"] = new ClientHome(),
     
-    ["employee-offerts"] = new EmployeeOffertList(offertService),
+    ["employee-offerts"] = new EmployeeOffertList(offertService, employeeService),
 
     ["client-offerts"] = new ClientOffertList(offertService, accomodationService, roomService, carrierService),
     // ["employee-register"] = new MenuPage(),
