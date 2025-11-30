@@ -8,7 +8,6 @@ public sealed class DataSeeder : IDataSeeder
     readonly IAccomodationService _accomodationService;
     readonly IAuthService<Client> _clientAuthService;
     readonly IAuthService<Employee> _employeeAuthService;
-    readonly IBookingService _bookingService;
     readonly ICarrierService _carrierService;
     readonly IClientService _clientService;
     readonly IEmployeeService _employeeService;
@@ -16,14 +15,12 @@ public sealed class DataSeeder : IDataSeeder
     readonly IReservationService _reservationService;
     readonly IRoomService _roomService;
 
-    public DataSeeder(IAccomodationService accomodationService, IAuthService<Client> clientAuthService, IAuthService<Employee> employeeAuthService,
-        IBookingService bookingService, ICarrierService carrierService, IClientService clientService, IEmployeeService employeeService, 
-        IOffertService offertService, IReservationService reservationService, IRoomService roomService)
+    public DataSeeder(IAccomodationService accomodationService, IAuthService<Client> clientAuthService, IAuthService<Employee> employeeAuthService, ICarrierService carrierService, 
+        IClientService clientService, IEmployeeService employeeService, IOffertService offertService, IReservationService reservationService, IRoomService roomService)
     {
         _accomodationService = accomodationService;
         _clientAuthService = clientAuthService;
         _employeeAuthService = employeeAuthService;
-        _bookingService = bookingService;
         _carrierService = carrierService;
         _clientService = clientService;
         _employeeService = employeeService;
@@ -58,42 +55,42 @@ public sealed class DataSeeder : IDataSeeder
         var accomodation4 = _accomodationService.Create("Comfort Inn", "Wroclaw ul.komfortowa 7", 4);
 
 
-        var room1 = _roomService.Create(accomodation1, Guid.Empty, 1, 129, 2, 24);
-        var room2 = _roomService.Create(accomodation1, Guid.Empty, 2, 220, 2, 24);
-        var room3 = _roomService.Create(accomodation1, Guid.Empty, 1, 111, 3, 20);
-        var room4 = _roomService.Create(accomodation1, Guid.Empty, 3, 301, 2, 24);
+        var room1 = _roomService.Create(accomodation1, null, 1, 129, 2, 24);
+        var room2 = _roomService.Create(accomodation1, null, 2, 220, 2, 24);
+        var room3 = _roomService.Create(accomodation1, null, 1, 111, 3, 20);
+        var room4 = _roomService.Create(accomodation1, null, 3, 301, 2, 24);
 
-        var room5 = _roomService.Create(accomodation2, Guid.Empty, 2, 210, 2, 1010);
-        var room6 = _roomService.Create(accomodation2, Guid.Empty, 2, 212, 2, 1200);
-        var room7 = _roomService.Create(accomodation2, Guid.Empty, 3, 320, 4, 1580);
-        var room8 = _roomService.Create(accomodation2, Guid.Empty, 5, 555, 5, 5200);
-        var room9 = _roomService.Create(accomodation2, Guid.Empty, 5, 519, 2, 32050);
-        var room10 = _roomService.Create(accomodation2, Guid.Empty, 2, 202, 2, 820);
+        var room5 = _roomService.Create(accomodation2, null, 2, 210, 2, 1010);
+        var room6 = _roomService.Create(accomodation2, null, 2, 212, 2, 1200);
+        var room7 = _roomService.Create(accomodation2, null, 3, 320, 4, 1580);
+        var room8 = _roomService.Create(accomodation2, null, 5, 555, 5, 5200);
+        var room9 = _roomService.Create(accomodation2, null, 5, 519, 2, 32050);
+        var room10 = _roomService.Create(accomodation2, null, 2, 202, 2, 820);
 
-        var room11 = _roomService.Create(accomodation3, Guid.Empty, 3, 311, 4, 420);
-        var room12 = _roomService.Create(accomodation3, Guid.Empty, 3, 307, 5, 550);
-        var room13 = _roomService.Create(accomodation3, Guid.Empty, 1, 123, 2, 310);
-        var room14 = _roomService.Create(accomodation3, Guid.Empty, 2, 219, 2, 400);
+        var room11 = _roomService.Create(accomodation3, null, 3, 311, 4, 420);
+        var room12 = _roomService.Create(accomodation3, null, 3, 307, 5, 550);
+        var room13 = _roomService.Create(accomodation3, null, 1, 123, 2, 310);
+        var room14 = _roomService.Create(accomodation3, null, 2, 219, 2, 400);
 
-        var room15 = _roomService.Create(accomodation4, Guid.Empty, 3, 309, 4, 750);
-        var room16 = _roomService.Create(accomodation4, Guid.Empty, 3, 310, 5, 810);
-        var room17 = _roomService.Create(accomodation4, Guid.Empty, 1, 100, 2, 460);
-        var room18 = _roomService.Create(accomodation4, Guid.Empty, 2, 236, 2, 415);
+        var room15 = _roomService.Create(accomodation4, null, 3, 309, 4, 750);
+        var room16 = _roomService.Create(accomodation4, null, 3, 310, 5, 810);
+        var room17 = _roomService.Create(accomodation4, null, 1, 100, 2, 460);
+        var room18 = _roomService.Create(accomodation4, null, 2, 236, 2, 415);
 
 
-        var offert1 = _offertService.Create(employee1.Id, DateTime.Now.AddDays(1), TimeSpan.FromDays(5), carrier1, accomodation1);
-        var offert2 = _offertService.Create(employee3.Id, DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation1);
-        var offert3 = _offertService.Create(employee4.Id, DateTime.Now.AddDays(14), TimeSpan.FromDays(2), carrier3, accomodation1);
+        var offert1 = _offertService.Create(employee1.Id, "Train Offert To Czestochowa", DateTime.Now.AddDays(1), TimeSpan.FromDays(5), carrier1, accomodation1);
+        var offert2 = _offertService.Create(employee3.Id, "Train Offert To Sczecin", DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation1);
+        var offert3 = _offertService.Create(employee4.Id, "Best Deal Train Offert To Szczecin", DateTime.Now.AddDays(14), TimeSpan.FromDays(2), carrier3, accomodation1);
 
-        var offert4 = _offertService.Create(employee4.Id, DateTime.Now.AddDays(22), TimeSpan.FromDays(7), carrier4, accomodation2);
-        var offert5 = _offertService.Create(employee1.Id, DateTime.Now.AddDays(1), TimeSpan.FromDays(4), carrier2, accomodation2);
+        var offert4 = _offertService.Create(employee4.Id, "Travel to the best Hotel", DateTime.Now.AddDays(22), TimeSpan.FromDays(7), carrier4, accomodation2);
+        var offert5 = _offertService.Create(employee1.Id, "Luxurious Rest on the beach", DateTime.Now.AddDays(1), TimeSpan.FromDays(4), carrier2, accomodation2);
 
-        var offert6 = _offertService.Create(employee3.Id, DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation3);
-        var offert7 = _offertService.Create(employee3.Id, DateTime.Now.AddDays(16), TimeSpan.FromDays(5), carrier1, accomodation3);
+        var offert6 = _offertService.Create(employee3.Id, "Fast and Cheap to Gdansk", DateTime.Now.AddDays(2), TimeSpan.FromDays(3), carrier3, accomodation3);
+        var offert7 = _offertService.Create(employee3.Id, "Last Minute Offert to Czestochowa", DateTime.Now.AddDays(16), TimeSpan.FromDays(5), carrier1, accomodation3);
 
-        var offert8 = _offertService.Create(employee4.Id, DateTime.Now.AddDays(7), TimeSpan.FromDays(5), carrier1, accomodation4);
-        var offert9 = _offertService.Create(employee1.Id, DateTime.Now.AddDays(10), TimeSpan.FromDays(4), carrier4, accomodation4);
-        var offert10 = _offertService.Create(employee2.Id, DateTime.Now.AddDays(3), TimeSpan.FromDays(5), carrier2, accomodation4);
+        var offert8 = _offertService.Create(employee4.Id, "Best offert To Czestochowa", DateTime.Now.AddDays(7), TimeSpan.FromDays(5), carrier1, accomodation4);
+        var offert9 = _offertService.Create(employee1.Id, "Travel From Poznan to Szczecin", DateTime.Now.AddDays(10), TimeSpan.FromDays(4), carrier4, accomodation4);
+        var offert10 = _offertService.Create(employee2.Id, "Offert Plain to Szczecin", DateTime.Now.AddDays(3), TimeSpan.FromDays(5), carrier2, accomodation4);
 
 
         // var reservation1 = _reservationService.Create()

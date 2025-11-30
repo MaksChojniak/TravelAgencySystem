@@ -58,20 +58,20 @@ public class AccomodationService : IAccomodationService
     public void Update(Guid id, string? name, string? address, int? stars)
     {
         if(Get(id) is not Accomodation accomodation)
-            throw new ArgumentException("Accomodation is not exist", nameof(accomodation));
+            throw new ArgumentException("Accomodation not exist", nameof(accomodation));
 
         accomodation.Name = name ?? accomodation.Name;
         accomodation.Address = address ?? accomodation.Address;
         accomodation.Stars = stars ?? accomodation.Stars;
-
         _dbContext.SaveChanges();
     }
 
     public void Remove(Guid id)
     {
         if(Get(id) is not Accomodation accomodation)
-            throw new ArgumentException("Accomodation is not exist", nameof(accomodation));
+            throw new ArgumentException("Accomodation not exist", nameof(accomodation));
 
         _accomodations.Remove(accomodation);
+        _dbContext.SaveChanges();
     }
 }

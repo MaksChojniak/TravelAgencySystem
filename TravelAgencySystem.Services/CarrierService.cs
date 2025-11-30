@@ -33,6 +33,9 @@ public class CarrierService : ICarrierService
         if(price <= 0)
             throw new ArgumentException("Price must be greater than 0", nameof(price));
 
+        if(_carriers.Query().Any(c => c.Name == name && c.StartPlace == startPlace && c.ReturnPlace == returnPlace))
+            throw new ArgumentException("That Carrier exist");
+
         Carrier carrier = new()
         {
             Id = Guid.NewGuid(),
@@ -55,19 +58,24 @@ public class CarrierService : ICarrierService
 
     public IReadOnlyList<Carrier> GetAll() => _carriers.Query().ToList();
 
-    public void Update(Guid id, string? name, TypeOfTransport? type, int? spaceCount, string? startPlace, string? returnPlace, double? price)
+    public void Update(Guid id, double? price)
     {
         if(Get(id) is not Carrier carrier)
-            throw new ArgumentException("Carrier is not exist", nameof(carrier));
+            throw new ArgumentException("Carrier not exist", nameof(carrier));
 
-        carrier.Name = name ?? carrier.Name;
-        carrier.Type = type ?? carrier.Type;
-        carrier.SpaceCount = spaceCount ?? carrier.SpaceCount;
-        carrier.StartPlace = startPlace ?? carrier.StartPlace;
-        carrier.ReturnPlace = returnPlace ?? carrier.ReturnPlace;
+        if(price <= 0)
+            throw new ArgumentException("Price must be greater than 0", nameof(price));
+
         carrier.Price = price ?? carrier.Price;
-
         _dbContext.SaveChanges();
     }
 
+    public void Remove(Guid id)
+    {
+        if(Get(id) is not Carrier carrier)
+            throw new ArgumentException("Carrier not exist", nameof(carrier));
+
+        _carriers.Remove(carrier);
+        _dbContext.SaveChanges();
+    }
 }

@@ -19,22 +19,6 @@ public class AuthService<T> : IAuthService<T> where T : Person, new()
         _db = db;
     }
 
-    // public void ChangePassword(string username, string password)
-    // {
-    //     if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-    //         throw new AuthException(AuthErrorCode.EmptyUsernameOrPassword);
-
-    //     AuthCredential? credential = _credentials.Query().FirstOrDefault(c => c.Username == username);
-    //     if (credential is null)
-    //         throw new AuthException(AuthErrorCode.AccountNotExist);
-
-    //     if(credential.Password == password)
-    //         throw new AuthException(AuthErrorCode.NewPasswordSameAsOld);
-
-    //     credential.Password = password;
-    //     _db.SaveChanges();
-    // }
-
     public T? CreateAccount(string username, string password)
     {
         if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
@@ -81,15 +65,6 @@ public class AuthService<T> : IAuthService<T> where T : Person, new()
 
         return person;
     }
-
-    // public void RequestPasswordReset(string username)
-    // {
-    //     if (string.IsNullOrEmpty(username))
-    //         throw new AuthException(AuthErrorCode.EmptyUsername);
-
-    //     if (!_credentials.Query().Any(c => c.Username == username))
-    //         throw new AuthException(AuthErrorCode.AccountNotExist);
-    // }
 }
 
 

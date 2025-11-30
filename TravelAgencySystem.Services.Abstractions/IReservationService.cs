@@ -4,8 +4,8 @@ namespace TravelAgencySystem.Services.Abstractions;
 
 public interface IReservationService
 {
-    Guid Create(Guid personId, Guid offertId);
+    Guid Create(Guid clientId, Guid offertId, IReadOnlyList<Guid> roomIds);
     Reservation? Get(Guid id);
-    IReadOnlyList<Reservation> GetAll();
-    void Update(Guid id, Guid? personId, Guid? offertId);
+    void Update(Guid id, ReservationStatus? status = null);
+    void Remove(Guid id);
 }

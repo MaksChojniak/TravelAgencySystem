@@ -20,15 +20,14 @@ IRepository<Room> roomRepository = new RoomRepository(db);
 IAccomodationService accomodationService = new AccomodationService(accomodationRepository, roomRepository, db);
 IAuthService<Client> clientAuthService = new AuthService<Client>(authCredentialRepository, clientRepository, db);
 IAuthService<Employee> employeeAuthService = new AuthService<Employee>(authCredentialRepository, employeeRepository, db);
-IBookingService bookingService = new BookingService(db);
 ICarrierService carrierService = new CarrierService(carrierRepository, db);
-IClientService clientService = new ClientService(clientRepository, db);
+IClientService clientService = new ClientService(clientRepository, reservationRepository, db);
 IEmployeeService employeeService = new EmployeeService(employeeRepository, db);
-IOffertService offertService = new OffertService(offertRepository, db);
-IReservationService reservationService = new ReservationService(reservationRepository, db);
-IRoomService roomService = new RoomService(roomRepository, db);
+IOffertService offertService = new OffertService(offertRepository, reservationRepository, carrierRepository, accomodationRepository, roomRepository, db);
+IReservationService reservationService = new ReservationService(reservationRepository, offertRepository, clientRepository, roomRepository, db);
+IRoomService roomService = new RoomService(roomRepository, accomodationRepository, reservationRepository, db);
 
-DataSeeder seeder = new(accomodationService, clientAuthService, employeeAuthService, bookingService, carrierService, clientService, employeeService,
+DataSeeder seeder = new(accomodationService, clientAuthService, employeeAuthService, carrierService, clientService, employeeService,
                         offertService, reservationService, roomService);
 seeder.Seed();
 

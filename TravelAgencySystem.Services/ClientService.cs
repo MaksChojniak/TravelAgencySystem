@@ -7,30 +7,33 @@ namespace TravelAgencySystem.Services.Abstractions;
 public class ClientService : IClientService
 {
     readonly IRepository<Client> _clients;
+    readonly IRepository<Reservation> _reservations;
 
     readonly IDbContext _dbContext;
 
-    public ClientService(IRepository<Client> clients, IDbContext dbContext)
+    public ClientService(IRepository<Client> clients, IRepository<Reservation> reservations, IDbContext dbContext)
     {
         _clients = clients;
+        _reservations = reservations;
         _dbContext = dbContext;
-    }
-
-    public Guid Create(string firstName, string lastName, string pesel, string phoneNumber, string email, string address)
-    {
-        throw new NotImplementedException();
     }
 
     public Client? Get(Guid id) => _clients.Get(id);
 
-    public IReadOnlyList<Client> GetAll() => _clients.Query().ToList();
+    public IReadOnlyList<Reservation> GetAllReservations(Guid clientId)
+    {
+        if(Get(clientId) is null)
+            throw new ArgumentException("Client not exist", nameof(clientId));
 
-    public bool Exist(Guid id) => _clients.Query().Any(e => e.Id == id);
+        return _reservations.Query().Where(r => r.ClientId == clientId).ToList();
+    }
+
+    // public IReadOnlyList<Client> GetAll() => _clients.Query().ToList();
 
     public void Update(Guid id, string? firstName, string? lastName, string? pesel, string? phoneNumber, string? email, string? address)
     {
         if(Get(id) is not Client client)
-            throw new ArgumentException("Client is not exist", nameof(client));
+            throw new ArgumentException("Client not exist", nameof(client));
 
         client.FirstName = firstName ?? client.FirstName;
         client.LastName = lastName ?? client.LastName;
@@ -41,5 +44,4 @@ public class ClientService : IClientService
 
         _dbContext.SaveChanges();
     }
-
 }
