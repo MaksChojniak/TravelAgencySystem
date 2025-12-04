@@ -13,6 +13,7 @@ public sealed class TextInputLabel : ElementBase
     {
         Console.Write(_text);
         string input = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine();
         _onTextEntered.Invoke(input);
     }
 }

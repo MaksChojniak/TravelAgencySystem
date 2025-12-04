@@ -22,7 +22,9 @@ public class ClientHome : PageBase
         {
             new TextLabel("1) All Offerts"),
             new TextLabel("2) Reservations"),
+            new TextLabel(),
             new TextLabel("3) Profile"),
+            new TextLabel(),
             new TextLabel("0) Logout")
         };
     }

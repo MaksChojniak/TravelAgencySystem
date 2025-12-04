@@ -41,7 +41,6 @@ public class EmployeeAuth : PageBase
     void Login()
     {
         Console.WriteLine();
-        Console.WriteLine();
         Console.Write("Login: ");
         string login = Console.ReadLine() ?? string.Empty;
         Console.Write("Password: ");
@@ -53,7 +52,6 @@ public class EmployeeAuth : PageBase
 
     void Register()
     {
-        Console.WriteLine();
         Console.WriteLine();
         Console.Write("Login: ");
         string login = Console.ReadLine() ?? string.Empty;

@@ -39,49 +39,33 @@ public class EmployeeOffertList : PageBase
     }
 
     List<TextLabel> GetOffertsAsLabels() => _employeeService.GetHostedOfferts(Session.PersonId)
-        .Select( (o,i) => new TextLabel($"- {i+1}. Offert  \'{o.Title}\'     ({o.Date.ToShortDateString()}-{(o.Date+o.Duration).ToShortDateString()})"))
+        .Select( (o,i) => new TextLabel(AsText(o, i)))
         .ToList();
+
+    string AsText(Offert offert, int index) => 
+        $"- {index+1}. Offert  \'{offert.Title}\'     ({offert.Date.ToShortDateString()}-{(offert.Date+offert.Duration).ToShortDateString()})";
 
     void OpenSelectOffert()
     {
-        if(_employeeService.GetHostedOfferts(Session.PersonId).Count == 0)
-        {
-            Console.WriteLine("-- No offerts available --");
-            PageExtension.Pause();
-            return;
-        }
+        var offerts = _employeeService.GetHostedOfferts(Session.PersonId);
 
-        Console.WriteLine();
+        if(offerts.Count == 0)
+            throw new Exception("No offerts available");
+
         Console.Write($"Select Offert: ");
         string input = Console.ReadLine()??string.Empty;
 
         if(string.IsNullOrEmpty(input))
-        {
-            PageExtension.ConsoleError("-- Invalid input --");
-            PageExtension.Pause();
-            Show();
-            return;
-        }
+            throw new Exception("Invalid input");
 
-        if(!int.TryParse(input, out var selectedOffertIndex))
-        {
-            PageExtension.ConsoleError("-- Not a number --");
-            PageExtension.Pause();
-            Show();
-            return;
-        }
+        if(!int.TryParse(input, out var selectedIndex))
+            throw new Exception("Not a number");
         
-        selectedOffertIndex -= 1;
-        if(selectedOffertIndex < 0 || selectedOffertIndex >= _employeeService.GetHostedOfferts(Session.PersonId).Count)
-        {
-            PageExtension.ConsoleError("-- Number out of range --");
-            PageExtension.Pause();
-            Show();
-            return;
-        }
+        selectedIndex -= 1;
+        if(selectedIndex < 0 || selectedIndex >= offerts.Count)
+            throw new Exception("Index out of range");
 
-
-        Offert offert = _employeeService.GetHostedOfferts(Session.PersonId)[selectedOffertIndex];
+        Offert offert = offerts[selectedIndex];
         // new EmployeeOffertDetails(offert, _offertService, _accomodationService, _carrierService).Show();
     } 
 

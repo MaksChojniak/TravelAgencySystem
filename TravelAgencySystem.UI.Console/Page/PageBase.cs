@@ -47,6 +47,7 @@ public abstract class PageBase
                 Console.Write("Select Operation: ");
 
                 var key = Console.ReadKey();
+                Console.WriteLine();
                 if(Actions.ContainsKey(key.KeyChar))
                 {
                     Actions[key.KeyChar]?.Invoke();

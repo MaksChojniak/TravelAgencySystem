@@ -23,6 +23,7 @@ public class ClientAuth : PageBase
         {
             new TextLabel("1) Login"),
             new TextLabel("2) Register"),
+            new TextLabel(),
             new TextLabel("0) Back")
         };
     }

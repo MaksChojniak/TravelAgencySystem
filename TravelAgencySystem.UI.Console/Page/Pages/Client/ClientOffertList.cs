@@ -26,7 +26,9 @@ public class ClientOffertList : PageBase
         {
             new TextLabel("Offerts: "),
             new ListView<TextLabel>(GetOffertsAsLabels()),
+            new TextLabel(),
             new TextLabel("1) Select Offert"),
+            new TextLabel(),
             new TextLabel("0) Back")
         };
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TravelAgencySystem.DataModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+188720bca2855aa0fe09539811624edb17b79038")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a170e64288c8bea76bc7ec4f69ce61fbdff995ac")]
 [assembly: System.Reflection.AssemblyProductAttribute("TravelAgencySystem.DataModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TravelAgencySystem.DataModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
