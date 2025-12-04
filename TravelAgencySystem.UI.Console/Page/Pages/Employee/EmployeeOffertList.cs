@@ -24,8 +24,10 @@ public class EmployeeOffertList : PageBase
         get => new List<ElementBase>()
         {
             new ListView<TextLabel>(GetOffertsAsLabels()),
+            new TextLabel(),
             new TextLabel("1) Select Offert"),
             new TextLabel("2) Create new Offfert"),
+            new TextLabel(),
             new TextLabel("0) Back")
         };
     }
@@ -42,17 +44,45 @@ public class EmployeeOffertList : PageBase
 
     void OpenSelectOffert()
     {
-        Console.WriteLine();
-        Console.Write("Selected Offert: ");
-        string input = Console.ReadLine()??string.Empty;
-        if(!string.IsNullOrEmpty(input) && int.TryParse(input, out var selectedOffertIndex) && 0 <= selectedOffertIndex-1 && selectedOffertIndex-1 < _offertService.GetAll().Count)
+        if(_employeeService.GetHostedOfferts(Session.PersonId).Count == 0)
         {
-            Offert offert = _offertService.GetAll()[selectedOffertIndex-1];
-            // new EmployeeOffertDetails(offert, _offertService, _accomodationService, _carrierService).Show();
+            Console.WriteLine("-- No offerts available --");
+            PageExtension.Pause();
             return;
         }
 
-        Show();
+        Console.WriteLine();
+        Console.Write($"Select Offert: ");
+        string input = Console.ReadLine()??string.Empty;
+
+        if(string.IsNullOrEmpty(input))
+        {
+            PageExtension.ConsoleError("-- Invalid input --");
+            PageExtension.Pause();
+            Show();
+            return;
+        }
+
+        if(!int.TryParse(input, out var selectedOffertIndex))
+        {
+            PageExtension.ConsoleError("-- Not a number --");
+            PageExtension.Pause();
+            Show();
+            return;
+        }
+        
+        selectedOffertIndex -= 1;
+        if(selectedOffertIndex < 0 || selectedOffertIndex >= _employeeService.GetHostedOfferts(Session.PersonId).Count)
+        {
+            PageExtension.ConsoleError("-- Number out of range --");
+            PageExtension.Pause();
+            Show();
+            return;
+        }
+
+
+        Offert offert = _employeeService.GetHostedOfferts(Session.PersonId)[selectedOffertIndex];
+        // new EmployeeOffertDetails(offert, _offertService, _accomodationService, _carrierService).Show();
     } 
 
 }

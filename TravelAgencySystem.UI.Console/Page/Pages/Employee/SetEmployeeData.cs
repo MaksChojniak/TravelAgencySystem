@@ -34,7 +34,7 @@ public class SetEmployeeData : PageBase
         _employeeService = employeeService;
     }
 
-    public override void Show()
+    protected override void Show()
     {
         base.Show();
 

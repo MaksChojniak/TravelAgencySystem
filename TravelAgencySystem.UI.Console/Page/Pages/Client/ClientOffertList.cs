@@ -40,7 +40,7 @@ public class ClientOffertList : PageBase
         _carrierService = carrierService;
     }
 
-    public override void Show()
+    protected override void Show()
     {
         base.Show();
 
@@ -59,7 +59,7 @@ public class ClientOffertList : PageBase
         if(!string.IsNullOrEmpty(input) && int.TryParse(input, out var selectedOffertIndex) && 0 <= selectedOffertIndex-1 && selectedOffertIndex-1 < _offertService.GetAll().Count)
         {
             Offert offert = _offertService.GetAll()[selectedOffertIndex-1];
-            new ClientOffertDetails(offert, _offertService, _accomodationService, _carrierService).Show();
+            // new ClientOffertDetails(offert, _offertService, _accomodationService, _carrierService).Show();
             return;
         }
 

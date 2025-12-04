@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj": {}
+    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj": {}
   },
   "projects": {
     "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
@@ -35,8 +35,8 @@
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               }
             }
           }
@@ -51,7 +51,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -72,18 +72,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj": {
+    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj",
+        "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj",
         "projectName": "TravelAgencySystem.DataAccess.Memory",
-        "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj",
+        "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj",
         "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\obj\\",
+        "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -107,8 +107,8 @@
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               }
             }
           }
@@ -123,7 +123,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -144,18 +144,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
+    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj",
+        "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj",
         "projectName": "TravelAgencySystem.Database.Abstractions",
-        "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj",
+        "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj",
         "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\obj\\",
+        "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -176,8 +176,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               }
             }
           }
@@ -192,7 +192,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -213,7 +213,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -245,11 +245,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               }
             }
           }
@@ -264,7 +264,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -285,18 +285,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj",
+        "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj",
         "projectName": "TravelAgencySystem.DataModel",
-        "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj",
+        "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj",
         "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\obj\\",
+        "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -329,7 +329,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -350,7 +350,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -382,8 +382,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               }
             }
           }
@@ -398,7 +398,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -419,7 +419,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
@@ -454,8 +454,8 @@
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               },
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services.Abstractions\\TravelAgencySystem.Services.Abstractions.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services.Abstractions\\TravelAgencySystem.Services.Abstractions.csproj"
@@ -473,7 +473,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -494,18 +494,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj": {
+    "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj",
+        "projectUniqueName": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj",
         "projectName": "TravelAgencySystem.UI.Console",
-        "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj",
+        "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\TravelAgencySystem.UI.Console.csproj",
         "packagesPath": "C:\\Users\\Maks\\.nuget\\packages\\",
-        "outputPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\obj\\",
+        "outputPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.UI.Console\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -529,17 +529,17 @@
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Abstractions\\TravelAgencySystem.DataAccess.Abstractions.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataAccess.Memory\\TravelAgencySystem.DataAccess.Memory.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj"
               },
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Memory\\TravelAgencySystem.Database.Memory.csproj"
               },
-              "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-                "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+              "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+                "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
               },
               "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services.Abstractions\\TravelAgencySystem.Services.Abstractions.csproj": {
                 "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Services.Abstractions\\TravelAgencySystem.Services.Abstractions.csproj"
@@ -560,7 +560,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -581,7 +581,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

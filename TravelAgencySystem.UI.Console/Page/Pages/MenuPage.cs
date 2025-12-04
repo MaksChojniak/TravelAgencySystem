@@ -10,7 +10,7 @@ public class MenuPage : PageBase
         {
             ['1'] = () => PageManager.LoadPage("employee-auth"),
             ['2'] = () => PageManager.LoadPage("client-auth"),
-            ['0'] = () => PageManager.LoadPage(),
+            ['0'] = () => Environment.Exit(0),
         };
     }
     protected override IEnumerable<ElementBase> Elements 
@@ -19,13 +19,14 @@ public class MenuPage : PageBase
         {
             new TextLabel("1) Employee"),
             new TextLabel("2) Client"),
+            new TextLabel(),
             new TextLabel("0) Exit")
         };
     }
 
     public MenuPage() {}
 
-    public override void Show()
+    protected override void Show()
     {
         Session.PersonId = Guid.Empty;
         base.Show();

@@ -19,8 +19,10 @@ public class AuthError : PageBase
     {
         get => new List<ElementBase>()
         {
-            new TextLabel(_error),
+            new TextLabel(_error, ConsoleColor.Red),
+            new TextLabel(),
             new TextLabel("1) Try Again"),
+            new TextLabel(),
             new TextLabel("0) Back")
         };
     }

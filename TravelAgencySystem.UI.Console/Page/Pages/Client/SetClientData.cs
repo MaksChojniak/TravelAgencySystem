@@ -38,7 +38,7 @@ public class SetClientData : PageBase
         _clientService = clientService;
     }
 
-    public override void Show()
+    protected override void Show()
     {
         base.Show();
 

@@ -35,12 +35,13 @@ public sealed class DataSeeder : IDataSeeder
         var employee1 = _employeeAuthService.CreateAccount("emp1", "pass1");
         var employee2 = _employeeAuthService.CreateAccount("emp2", "pass2");
         var employee3 = _employeeAuthService.CreateAccount("emp3", "pass3");
-        var employee4 = _employeeAuthService.CreateAccount("emp4", "pass3");
+        var employee4 = _employeeAuthService.CreateAccount("emp4", "pass4");
+        var employee5 = _employeeAuthService.CreateAccount("emp5", "pass5");
         
         var client1 = _clientAuthService.CreateAccount("client1", "pass1");
         var client2 = _clientAuthService.CreateAccount("client2", "pass2");
         var client3 = _clientAuthService.CreateAccount("client3", "pass3");
-        var client4 = _clientAuthService.CreateAccount("client4", "pass3");
+        var client4 = _clientAuthService.CreateAccount("client4", "pass4");
 
 
         var carrier1 = _carrierService.Create("PKP IC", TypeOfTransport.Train, 120, "Warszawa", "Czestochowa", 50);

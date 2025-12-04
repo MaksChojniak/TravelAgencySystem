@@ -77,11 +77,11 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
-              "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj"
+            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj": {
+              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.Database.Abstractions\\TravelAgencySystem.Database.Abstractions.csproj"
             },
-            "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
-              "projectPath": "d:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
+            "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj": {
+              "projectPath": "D:\\Projects\\C#\\Projekt\\TravelAgencySystem\\TravelAgencySystem\\TravelAgencySystem.DataModel\\TravelAgencySystem.DataModel.csproj"
             }
           }
         }
@@ -96,7 +96,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -117,7 +117,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.307/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

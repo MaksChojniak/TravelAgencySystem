@@ -22,9 +22,12 @@ public class EmployeeHome : PageBase
         get => new List<ElementBase>()
         {
             new TextLabel("1) Hosted Offerts"),
+            new TextLabel(),
             new TextLabel("2) Accomodations"),
             new TextLabel("3) Carriers"),
+            new TextLabel(),
             new TextLabel("4) Profile"),
+            new TextLabel(),
             new TextLabel("0) Logout")
         };
     }

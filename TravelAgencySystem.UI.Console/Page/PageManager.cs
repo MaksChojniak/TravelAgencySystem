@@ -18,6 +18,6 @@ public static class PageManager
         if(!Pages.ContainsKey(name))
             return;
 
-        Pages[name]?.Show();
+        Pages[name]?.Load();
     }
 }
