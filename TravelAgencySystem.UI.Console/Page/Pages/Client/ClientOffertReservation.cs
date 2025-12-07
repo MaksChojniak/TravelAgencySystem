@@ -2,7 +2,7 @@ using System.Security;
 using TravelAgencySystem.DataModel;
 using TravelAgencySystem.Services.Abstractions;
 
-public class ClientOffertDetails : PageBase
+public class ClientOffertReservation : PageBase
 {
     readonly IReservationService _reservationService;
     readonly IOffertService _offertService;
@@ -22,11 +22,7 @@ public class ClientOffertDetails : PageBase
     }
     protected override Dictionary<char, Action?> Actions 
     { 
-        get => new Dictionary<char, Action?>()
-        {
-            ['1'] = () => new ClientOffertReservation(_offert.Id, _reservationService, _offertService, _accomodationService, _carrierService).Load(),
-            ['0'] = () => PageManager.LoadPage("client-offerts"),
-        };
+        get => new Dictionary<char, Action?>() {};
     }
     protected override IEnumerable<ElementBase> Elements 
     { 
@@ -45,14 +41,10 @@ public class ClientOffertDetails : PageBase
             new TextLabel($"  -Address: {_accomodation.Address}"),
             new TextLabel($"  -Free Rooms: "),
             new ListView<TextLabel>(GetFreeRoomsAsLabels()),
-            new TextLabel(),
-            new TextLabel("1) Reserve"),
-            new TextLabel(),
-            new TextLabel("0) Back")
         };
     }
 
-    public ClientOffertDetails(Guid offertId, IReservationService reservationService, IOffertService offertService, IAccomodationService accomodationService,
+    public ClientOffertReservation(Guid offertId,IReservationService reservationService, IOffertService offertService, IAccomodationService accomodationService,
         ICarrierService carrierService)
     {
         _reservationService = reservationService;
@@ -68,7 +60,7 @@ public class ClientOffertDetails : PageBase
     List<TextLabel> GetFreeRoomsAsLabels()
     {
         List<TextLabel> list = _accomodationService.GetAvaiableRooms(_offert.AccomodationId)
-        .Select( room => new TextLabel($"    - Room {room.Number}, Floor {room.Floor}  Space Count {room.SpaceCount}  Price: {room.Price}PLN"))
+        .Select( (room, i) => new TextLabel($"    - {i+1}. Room {room.Number}, Floor {room.Floor}  Space Count {room.SpaceCount}  Price: {room.Price}PLN"))
         .ToList(); 
 
         if(list.Count <= 0)
@@ -78,4 +70,36 @@ public class ClientOffertDetails : PageBase
     }
 
     string stars(int count) => new string('*', count).NormalizeTextSize(5);
+
+    protected override void Show()
+    {
+        base.Show();
+
+        List<Room> rooms = _accomodationService.GetAvaiableRooms(_accomodation.Id).SelectManyFromList();
+
+        Console.WriteLine();
+        Console.WriteLine($"Carrier Price: {rooms.Sum(r => r.SpaceCount)} * {_carrier.Price}PLN");
+        Console.WriteLine($"Accomodation Price {string.Join(" + ", rooms.Select(r => $"{r.Price}PLN"))}");
+        double totalPrice = (_carrier.Price * rooms.Sum(r => r.SpaceCount)) + rooms.Sum(r => r.Price);
+        Console.WriteLine($"=== Total price: {totalPrice}PLN ===");
+
+        Console.WriteLine();
+        Console.Write("Reserve? (Yes/No): ");
+        string input = (Console.ReadLine()??string.Empty).ToLower();
+        if(input == "yes")
+        {
+            _reservationService.Create(Session.PersonId, _offert.Id, totalPrice, rooms.Select(r => r.Id).ToList());
+            Console.WriteLine();
+            Console.WriteLine("Reservation created successfully.");
+            PageExtension.Pause();
+        }
+        else
+        {
+            Console.WriteLine();
+            Console.WriteLine("Reservation cancellled.");
+            PageExtension.Pause();
+        }
+
+        PageManager.LoadPage("client-offerts");
+    }
 }

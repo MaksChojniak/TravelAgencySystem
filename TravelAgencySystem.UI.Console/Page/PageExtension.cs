@@ -34,8 +34,37 @@ public static class PageExtension
         if(selectedIndex < 0 || selectedIndex >= list.Count)
             throw new Exception("Index out of range");
 
-        T accomodation = list[selectedIndex];
-        return accomodation;
+        T item = list[selectedIndex];
+        return item;
+    }
+
+    public static List<T> SelectManyFromList<T>(this IReadOnlyList<T> list)
+    {
+        if(list.Count == 0)
+            throw new Exception("List is Empty");
+
+        Console.Write($"Select: ");
+        string input = Console.ReadLine()??string.Empty;
+        List<string> inputs = input.Split(',').Select(s => s.Trim()).ToList();
+
+        if(inputs.Any(input => string.IsNullOrEmpty(input)))
+            throw new Exception("Invalid input");
+
+        List<int> selectedIndexes = new();
+        if(inputs.Any(input =>
+        {
+            bool state = !int.TryParse(input, out var selectedIndex);
+            selectedIndexes.Add(selectedIndex);
+            return state;
+        }))
+            throw new Exception("Not a number");
+        
+        selectedIndexes = selectedIndexes.Select(i => i-1).ToList();
+        if(selectedIndexes.Any(selectedIndex => selectedIndex < 0 || selectedIndex >= list.Count))
+            throw new Exception("Index out of range");
+
+        List<T> items = selectedIndexes.Select(index => list[index]).ToList();
+        return items;
     }
 
 }

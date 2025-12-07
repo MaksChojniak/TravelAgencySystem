@@ -3,6 +3,7 @@ using TravelAgencySystem.Services.Abstractions;
 
 public class ClientOffertList : PageBase
 {
+    readonly IReservationService _reservationService;
     readonly IOffertService _offertService;
     readonly IAccomodationService _accomodationService;
     readonly IRoomService _roomService;
@@ -33,9 +34,10 @@ public class ClientOffertList : PageBase
         };
     }
 
-    public ClientOffertList(IOffertService offertService, IAccomodationService accomodationService, 
+    public ClientOffertList(IReservationService reservationService, IOffertService offertService, IAccomodationService accomodationService, 
         IRoomService roomService, ICarrierService carrierService)
     {
+        _reservationService = reservationService;
         _offertService = offertService;
         _accomodationService = accomodationService;
         _roomService = roomService;
@@ -49,7 +51,7 @@ public class ClientOffertList : PageBase
     void OpenSelectOffert()
     {
         Offert offert = _offertService.GetAll().SelectFromList();
-        new ClientOffertDetails(offert.Id, _offertService, _accomodationService, _carrierService).Load();
+        new ClientOffertDetails(offert.Id,_reservationService, _offertService, _accomodationService, _carrierService).Load();
 
         Show();
     } 
