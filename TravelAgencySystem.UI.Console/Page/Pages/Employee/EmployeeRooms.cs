@@ -52,91 +52,49 @@ public class EmployeeRooms : PageBase
 
     void AddRoom()
     {
-        // Console.WriteLine($"Adding new Accomodation");
-        // Console.Write($"Name: ");
-        // string name = Console.ReadLine()??string.Empty;
-        // Console.Write($"Address: ");
-        // string address = Console.ReadLine()??string.Empty;
-        // Console.Write($"Stars: ");
-        // int stars = int.Parse(Console.ReadLine()??string.Empty);
+        Console.WriteLine($"Adding new Room");
+        Console.Write($"Number: ");
+        int number = int.Parse(Console.ReadLine()??string.Empty);
+        Console.Write($"Floor: ");
+        int floor = int.Parse(Console.ReadLine()??string.Empty);
+        Console.Write($"Space Count: ");
+        int spaceCount = int.Parse(Console.ReadLine()??string.Empty);
+        Console.Write($"Price: ");
+        double price = double.Parse(Console.ReadLine()??string.Empty);
 
-        // _accomodationService.Create(name, address, stars);
+        _roomService.Create(_accomodationId, null, floor, number, spaceCount, price);
 
-        // Console.WriteLine();
-        // Console.WriteLine("Accomodation added successfully.");
-        // PageExtension.Pause();
+        Console.WriteLine();
+        Console.WriteLine("Room added successfully.");
+        PageExtension.Pause();
     }
 
     void RemoveRoom()
     {
-        // var accomodations = _accomodationService.GetAll();
+        Room room = _roomService.GetAll().SelectFromList();
+        _roomService.Remove(room.Id);
 
-        // if(accomodations.Count == 0)
-        //     throw new Exception("No Accomodations available");
-
-        // Console.Write($"Select Accomodation: ");
-        // string input = Console.ReadLine()??string.Empty;
-
-        // if(string.IsNullOrEmpty(input))
-        //     throw new Exception("Invalid input");
-
-        // if(!int.TryParse(input, out var selectedIndex))
-        //     throw new Exception("Not a number");
-        
-        // selectedIndex -= 1;
-        // if(selectedIndex < 0 || selectedIndex >= accomodations.Count)
-        //     throw new Exception("Index out of range");
-
-        // Accomodation accomodation = accomodations[selectedIndex];
-        // _accomodationService.Remove(accomodation.Id);
-
-        // Console.WriteLine();
-        // Console.WriteLine("Accomodation removed successfully.");
-        // PageExtension.Pause();
+        Console.WriteLine();
+        Console.WriteLine("Room removed successfully.");
+        PageExtension.Pause();
     }
 
     void UpdateRoom()
     {
-        // var accomodations = _accomodationService.GetAll();
+        Room room = _roomService.GetAll().SelectFromList();
 
-        // if(accomodations.Count == 0)
-        //     throw new Exception("No Accomodations available");
+        Console.WriteLine();
+        Console.WriteLine($"Updating Room Price");
+        Console.Write($"Price: ");
+        double? price = null;
+        if(double.TryParse(Console.ReadLine()??string.Empty, out var parsedPrice))
+            price = parsedPrice;
 
-        // Console.Write($"Select Accomodation: ");
-        // string input = Console.ReadLine()??string.Empty;
+        _roomService.Update(room.Id, price);
 
-        // if(string.IsNullOrEmpty(input))
-        //     throw new Exception("Invalid input");
-
-        // if(!int.TryParse(input, out var selectedIndex))
-        //     throw new Exception("Not a number");
-        
-        // selectedIndex -= 1;
-        // if(selectedIndex < 0 || selectedIndex >= accomodations.Count)
-        //     throw new Exception("Index out of range");
-
-        // Accomodation accomodation = accomodations[selectedIndex];
-
-        // Console.WriteLine();
-        // Console.WriteLine($"Updating Accomodation");
-        // Console.Write($"Name: ");
-        // string? name = Console.ReadLine()??string.Empty;
-        // if(string.IsNullOrEmpty(name))
-        //     name = null;
-        // Console.Write($"Address: ");
-        // string? address = Console.ReadLine()??string.Empty;
-        // if(string.IsNullOrEmpty(address))
-        //     address = null;
-        // Console.Write($"Stars: ");
-        // int? stars = null;
-        // if(int.TryParse(Console.ReadLine()??string.Empty, out var parsedStars))
-        //     stars = parsedStars;
-
-        // _accomodationService.Update(accomodation.Id, name, address, stars);
-
-        // Console.WriteLine();
-        // Console.WriteLine("Accomodation updated successfully.");
-        // PageExtension.Pause();
+        Console.WriteLine();
+        Console.WriteLine("Room updated successfully.");
+        PageExtension.Pause();
     }
 
 }
