@@ -7,6 +7,7 @@ public class Reservation
     public Guid OffertId { get; set; }
     public int NumberOfPeople { get; set; }
     public ReservationStatus Status { get; set; }
+    public double Price { get; set; }
 }
 
 public enum ReservationStatus

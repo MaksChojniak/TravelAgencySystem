@@ -23,13 +23,16 @@ public class ReservationService : IReservationService
     }
 
 
-    public Guid Create(Guid clientId, Guid offertId, IReadOnlyList<Guid> roomIds)
+    public Guid Create(Guid clientId, Guid offertId, double price, IReadOnlyList<Guid> roomIds)
     {
         if(_clients.Get(clientId) is null)
             throw new ArgumentException("Client not exist", nameof(clientId));
 
         if(_offerts.Get(offertId) is null)
             throw new ArgumentException("Offert not exist", nameof(offertId));
+
+        if(price < 0)
+            throw new ArgumentException("Price must be greater than 0", nameof(price));
 
         if(roomIds.Count <= 0)
             throw new ArgumentException("No rooms selected", nameof(roomIds));
@@ -50,6 +53,7 @@ public class ReservationService : IReservationService
             ClientId = clientId,
             OffertId = offertId,
             Status = ReservationStatus.InProgress,
+            Price = price,
             NumberOfPeople = roomIds.Sum(roomId => _rooms.Get(roomId).SpaceCount)
         };
 
