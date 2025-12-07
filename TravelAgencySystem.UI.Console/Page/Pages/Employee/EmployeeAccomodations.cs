@@ -50,7 +50,7 @@ public class EmployeeAccomodations : PageBase
     string AsText(Accomodation accomodation, int index) => 
         $"- {index+1}. {accomodation.Name.NormalizeTextSize(_accomodationService.GetAll().Max(a => a.Name.Length))} {stars(accomodation.Stars)}    Address: {accomodation.Address}";
 
-    string stars(int count) => new string('*', count) + new string(' ', 5-count);
+    string stars(int count) => new string('*', count).NormalizeTextSize(5);
 
     void AddAccomodation()
     {

@@ -42,28 +42,14 @@ public class ClientOffertList : PageBase
         _carrierService = carrierService;
     }
 
-    protected override void Show()
-    {
-        base.Show();
-
-
-    }
-
     List<TextLabel> GetOffertsAsLabels() => _offertService.GetAll()
         .Select( (o,i) => new TextLabel($"- {i+1}.  \'{o.Title}\'     ({o.Date.ToShortDateString()}-{(o.Date+o.Duration).ToShortDateString()})"))
         .ToList();
 
     void OpenSelectOffert()
     {
-        Console.WriteLine();
-        Console.Write("Selected Offert: ");
-        string input = Console.ReadLine()??string.Empty;
-        if(!string.IsNullOrEmpty(input) && int.TryParse(input, out var selectedOffertIndex) && 0 <= selectedOffertIndex-1 && selectedOffertIndex-1 < _offertService.GetAll().Count)
-        {
-            Offert offert = _offertService.GetAll()[selectedOffertIndex-1];
-            // new ClientOffertDetails(offert, _offertService, _accomodationService, _carrierService).Show();
-            return;
-        }
+        Offert offert = _offertService.GetAll().SelectFromList();
+        new ClientOffertDetails(offert.Id, _offertService, _accomodationService, _carrierService).Load();
 
         Show();
     } 

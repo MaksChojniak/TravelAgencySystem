@@ -49,8 +49,6 @@ PageManager.Pages = new()
     ["employee-profile"] = new ClientHome(),
 
     ["client-offerts"] = new ClientOffertList(offertService, accomodationService, roomService, carrierService),
-    // ["employee-register"] = new MenuPage(),
-    // ["Menu"] = new MenuPage(),
 
 };
 
