@@ -17,7 +17,7 @@ public class EmployeeAccomodations : PageBase
             ['1'] = () => AddAccomodation(),
             ['2'] = () => RemoveAccomodation(),
             ['3'] = () => UpdateAccomodation(),
-            ['4'] = () => {},
+            ['4'] = () => ShowRooms(),
             ['0'] = () => PageManager.LoadPage("employee-home"),
         };
     }
@@ -48,9 +48,8 @@ public class EmployeeAccomodations : PageBase
         .ToList();
 
     string AsText(Accomodation accomodation, int index) => 
-        $"- {index+1}. {normalizeSize(accomodation.Name, _accomodationService.GetAll().Max(a => a.Name.Length))} {stars(accomodation.Stars)}    Address: {accomodation.Address}";
+        $"- {index+1}. {accomodation.Name.NormalizeTextSize(_accomodationService.GetAll().Max(a => a.Name.Length))} {stars(accomodation.Stars)}    Address: {accomodation.Address}";
 
-    string normalizeSize(string text, int size) => text + new string(' ', Math.Clamp(size-text.Length, 0, int.MaxValue));
     string stars(int count) => new string('*', count) + new string(' ', 5-count);
 
     void AddAccomodation()
@@ -72,25 +71,7 @@ public class EmployeeAccomodations : PageBase
 
     void RemoveAccomodation()
     {
-        var accomodations = _accomodationService.GetAll();
-
-        if(accomodations.Count == 0)
-            throw new Exception("No Accomodations available");
-
-        Console.Write($"Select Accomodation: ");
-        string input = Console.ReadLine()??string.Empty;
-
-        if(string.IsNullOrEmpty(input))
-            throw new Exception("Invalid input");
-
-        if(!int.TryParse(input, out var selectedIndex))
-            throw new Exception("Not a number");
-        
-        selectedIndex -= 1;
-        if(selectedIndex < 0 || selectedIndex >= accomodations.Count)
-            throw new Exception("Index out of range");
-
-        Accomodation accomodation = accomodations[selectedIndex];
+        Accomodation accomodation = _accomodationService.GetAll().SelectFromList();
         _accomodationService.Remove(accomodation.Id);
 
         Console.WriteLine();
@@ -100,25 +81,7 @@ public class EmployeeAccomodations : PageBase
 
     void UpdateAccomodation()
     {
-        var accomodations = _accomodationService.GetAll();
-
-        if(accomodations.Count == 0)
-            throw new Exception("No Accomodations available");
-
-        Console.Write($"Select Accomodation: ");
-        string input = Console.ReadLine()??string.Empty;
-
-        if(string.IsNullOrEmpty(input))
-            throw new Exception("Invalid input");
-
-        if(!int.TryParse(input, out var selectedIndex))
-            throw new Exception("Not a number");
-        
-        selectedIndex -= 1;
-        if(selectedIndex < 0 || selectedIndex >= accomodations.Count)
-            throw new Exception("Index out of range");
-
-        Accomodation accomodation = accomodations[selectedIndex];
+        Accomodation accomodation = _accomodationService.GetAll().SelectFromList();
 
         Console.WriteLine();
         Console.WriteLine($"Updating Accomodation");
@@ -140,6 +103,13 @@ public class EmployeeAccomodations : PageBase
         Console.WriteLine();
         Console.WriteLine("Accomodation updated successfully.");
         PageExtension.Pause();
+    }
+
+
+    void ShowRooms()
+    {
+        Accomodation accomodation = _accomodationService.GetAll().SelectFromList();
+        new EmployeeRooms(accomodation.Id, _accomodationService, _roomService).Load();
     }
 
 }
