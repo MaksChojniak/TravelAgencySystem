@@ -12,7 +12,7 @@ public class ClientHome : PageBase
         {
             ['1'] = () => PageManager.LoadPage("client-offerts"),
             ['2'] = () => PageManager.LoadPage("client-reservations"),
-            ['3'] = () => PageManager.LoadPage("client-proile"),
+            // ['3'] = () => PageManager.LoadPage("client-profile"),
             ['0'] = () => PageManager.LoadPage("menu"),
         };
     }
@@ -23,8 +23,8 @@ public class ClientHome : PageBase
             new TextLabel("1) All Offerts"),
             new TextLabel("2) Reservations"),
             new TextLabel(),
-            new TextLabel("3) Profile"),
-            new TextLabel(),
+            // new TextLabel("3) Profile"),
+            // new TextLabel(),
             new TextLabel("0) Logout")
         };
     }

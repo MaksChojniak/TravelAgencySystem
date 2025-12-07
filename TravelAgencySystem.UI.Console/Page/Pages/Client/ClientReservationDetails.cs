@@ -75,7 +75,7 @@ public class ClientReservationDetails : PageBase
 
     List<TextLabel> GetRoomsAsLabels()
     {
-        List<TextLabel> list = _roomService.GetAll().Where(r => r.ReservationId == _reservation.Id)
+        List<TextLabel> list = _accomodationService.GetRooms(_accomodation.Id).Where(r => r.ReservationId == _reservation.Id)
         .Select( room => new TextLabel($"    - Room {room.Number}, Floor {room.Floor}  Space Count {room.SpaceCount}"))
         .ToList(); 
 

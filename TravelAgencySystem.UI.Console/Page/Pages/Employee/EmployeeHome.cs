@@ -13,7 +13,7 @@ public class EmployeeHome : PageBase
             ['1'] = () => PageManager.LoadPage("employee-offerts"),
             ['2'] = () => PageManager.LoadPage("employee-accomodations"),
             ['3'] = () => PageManager.LoadPage("employee-carriers"),
-            ['4'] = () => PageManager.LoadPage("employee-proile"),
+            // ['4'] = () => PageManager.LoadPage("employee-proile"),
             ['0'] = () => PageManager.LoadPage("menu"),
         };
     }
@@ -24,8 +24,8 @@ public class EmployeeHome : PageBase
             new TextLabel("1) Hosted Offerts"),
             new TextLabel("2) Accomodations"),
             new TextLabel("3) Carriers"),
-            new TextLabel(),
-            new TextLabel("4) Profile"),
+            // new TextLabel(),
+            // new TextLabel("4) Profile"),
             new TextLabel(),
             new TextLabel("0) Logout")
         };
