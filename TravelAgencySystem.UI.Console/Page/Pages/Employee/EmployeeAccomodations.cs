@@ -27,9 +27,9 @@ public class EmployeeAccomodations : PageBase
         {
             new ListView<TextLabel>(GetAccomodationsAsLabels()),
             new TextLabel(),
-            new TextLabel("1) Add Offert"),
-            new TextLabel("2) Remove Offert"),
-            new TextLabel("3) Update Offfert"),
+            new TextLabel("1) Add Accomodation"),
+            new TextLabel("2) Remove Accomodation"),
+            new TextLabel("3) Update Accomodation"),
             new TextLabel(),
             new TextLabel("4) Show Rooms"),
             new TextLabel(),

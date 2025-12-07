@@ -45,7 +45,7 @@ PageManager.Pages = new()
     
     ["employee-offerts"] = new EmployeeOffertList(offertService, employeeService),
     ["employee-accomodations"] = new EmployeeAccomodations(accomodationService, roomService),
-    ["employee-carriers"] = new ClientHome(),
+    ["employee-carriers"] = new EmployeeCarriers(carrierService),
     ["employee-profile"] = new ClientHome(),
 
     ["client-offerts"] = new ClientOffertList(offertService, accomodationService, roomService, carrierService),

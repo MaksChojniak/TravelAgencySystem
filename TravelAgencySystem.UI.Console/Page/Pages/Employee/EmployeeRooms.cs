@@ -84,7 +84,7 @@ public class EmployeeRooms : PageBase
         Room room = _roomService.GetAll().SelectFromList();
 
         Console.WriteLine();
-        Console.WriteLine($"Updating Room Price");
+        Console.WriteLine($"Updating Room");
         Console.Write($"Price: ");
         double? price = null;
         if(double.TryParse(Console.ReadLine()??string.Empty, out var parsedPrice))
