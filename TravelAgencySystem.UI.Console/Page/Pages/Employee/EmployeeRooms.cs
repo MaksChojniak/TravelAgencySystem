@@ -18,7 +18,6 @@ public class EmployeeRooms : PageBase
             ['1'] = () => AddRoom(),
             ['2'] = () => RemoveRoom(),
             ['3'] = () => UpdateRoom(),
-            ['4'] = () => {},
             ['0'] = () => PageManager.LoadPage("employee-accomodations"),
         };
     }
@@ -65,23 +64,23 @@ public class EmployeeRooms : PageBase
         _roomService.Create(_accomodationId, null, floor, number, spaceCount, price);
 
         Console.WriteLine();
-        Console.WriteLine("Room added successfully.");
+        PageExtension.ConsoleSucces("Room added successfully.");
         PageExtension.Pause();
     }
 
     void RemoveRoom()
     {
-        Room room = _roomService.GetAll().SelectFromList();
+        Room room = _accomodationService.GetRooms(_accomodationId).SelectFromList();
         _roomService.Remove(room.Id);
 
         Console.WriteLine();
-        Console.WriteLine("Room removed successfully.");
+        PageExtension.ConsoleSucces("Room removed successfully.");
         PageExtension.Pause();
     }
 
     void UpdateRoom()
     {
-        Room room = _roomService.GetAll().SelectFromList();
+        Room room = _accomodationService.GetRooms(_accomodationId).SelectFromList();
 
         Console.WriteLine();
         Console.WriteLine($"Updating Room");
@@ -93,7 +92,7 @@ public class EmployeeRooms : PageBase
         _roomService.Update(room.Id, price);
 
         Console.WriteLine();
-        Console.WriteLine("Room updated successfully.");
+        PageExtension.ConsoleSucces("Room updated successfully.");
         PageExtension.Pause();
     }
 

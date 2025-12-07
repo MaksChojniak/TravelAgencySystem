@@ -14,6 +14,13 @@ public static class PageExtension
         Console.ResetColor();
     }
 
+    public static void ConsoleSucces(string message)
+    {
+        Console.ForegroundColor = ConsoleColor.DarkGreen;
+        Console.WriteLine(message);
+        Console.ResetColor();
+    }
+
     public static string NormalizeTextSize(this string text, int size) => text + new string(' ', Math.Clamp(size-text.Length, 0, int.MaxValue));
 
     public static T SelectFromList<T>(this IReadOnlyList<T> list)

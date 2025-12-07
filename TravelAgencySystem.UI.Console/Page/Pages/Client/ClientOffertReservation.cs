@@ -102,13 +102,13 @@ public class ClientOffertReservation : PageBase
             }
             
             Console.WriteLine();
-            Console.WriteLine("Reservation created successfully.");
+            PageExtension.ConsoleSucces("Reservation created successfully.");
             PageExtension.Pause();
         }
         else
         {
             Console.WriteLine();
-            Console.WriteLine("Reservation cancellled.");
+            PageExtension.ConsoleError("Reservation cancellled.");
             PageExtension.Pause();
         }
 

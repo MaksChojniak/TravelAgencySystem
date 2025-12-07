@@ -64,7 +64,7 @@ public class EmployeeCarriers : PageBase
         _carrierService.Create(name, type, spaceCount, startPlace, returnPlace, price);
 
         Console.WriteLine();
-        Console.WriteLine("Carrier added successfully.");
+        PageExtension.ConsoleSucces("Carrier added successfully.");
         PageExtension.Pause();
     }
 
@@ -74,7 +74,7 @@ public class EmployeeCarriers : PageBase
         _carrierService.Remove(carrier.Id);
 
         Console.WriteLine();
-        Console.WriteLine("Carrier removed successfully.");
+        PageExtension.ConsoleSucces("Carrier removed successfully.");
         PageExtension.Pause();
     }
 
@@ -92,7 +92,7 @@ public class EmployeeCarriers : PageBase
         _carrierService.Update(carrier.Id, price);
 
         Console.WriteLine();
-        Console.WriteLine("Carrier updated successfully.");
+        PageExtension.ConsoleSucces("Carrier updated successfully.");
         PageExtension.Pause();
     }
 

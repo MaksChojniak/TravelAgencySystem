@@ -92,14 +92,14 @@ public class ClientReservationDetails : PageBase
         if(_reservationService.Get(_reservation.Id).Status == ReservationStatus.Paid)
         {
             Console.WriteLine();
-            Console.WriteLine("Reservation status is Payed .");
+            PageExtension.ConsoleSucces("Paying Cancelled. Reservation status is Payed .");
             PageExtension.Pause();    
         }
 
         _reservationService.Update(_reservation.Id, ReservationStatus.Paid);
 
         Console.WriteLine();
-        Console.WriteLine("Reservation Payed successfully.");
+        PageExtension.ConsoleSucces("Reservation Payed successfully.");
         PageExtension.Pause();
     }
 
@@ -108,7 +108,7 @@ public class ClientReservationDetails : PageBase
         _reservationService.Remove(_reservation.Id);
 
         Console.WriteLine();
-        Console.WriteLine("Reservation cancelled successfully.");
+        PageExtension.ConsoleSucces("Reservation cancelled successfully.");
         PageExtension.Pause();
 
         PageManager.LoadPage("client-reservations");

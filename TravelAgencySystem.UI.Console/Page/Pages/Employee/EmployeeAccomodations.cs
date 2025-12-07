@@ -65,7 +65,7 @@ public class EmployeeAccomodations : PageBase
         _accomodationService.Create(name, address, stars);
 
         Console.WriteLine();
-        Console.WriteLine("Accomodation added successfully.");
+        PageExtension.ConsoleSucces("Accomodation added successfully.");
         PageExtension.Pause();
     }
 
@@ -75,7 +75,7 @@ public class EmployeeAccomodations : PageBase
         _accomodationService.Remove(accomodation.Id);
 
         Console.WriteLine();
-        Console.WriteLine("Accomodation removed successfully.");
+        PageExtension.ConsoleSucces("Accomodation removed successfully.");
         PageExtension.Pause();
     }
 
@@ -101,7 +101,7 @@ public class EmployeeAccomodations : PageBase
         _accomodationService.Update(accomodation.Id, name, address, stars);
 
         Console.WriteLine();
-        Console.WriteLine("Accomodation updated successfully.");
+        PageExtension.ConsoleSucces("Accomodation updated successfully.");
         PageExtension.Pause();
     }
 
