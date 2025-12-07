@@ -94,9 +94,9 @@ public sealed class DataSeeder : IDataSeeder
         var offert10 = _offertService.Create(employee2, "Offert Plain to Szczecin", DateTime.Now.AddDays(3), TimeSpan.FromDays(5), carrier2, accomodation4);
 
 
-        var reservation1 = _reservationService.Create(client1, offert1, new List<Guid> { room1, room2 });
-        var reservation2 = _reservationService.Create(client1, offert10, new List<Guid> { room15 });
-        var reservation3 = _reservationService.Create(client2, offert5, new List<Guid> { room5 });
+        var reservation1 = _reservationService.Create(client1, offert1, 1000, new List<Guid> { room1, room2 });
+        var reservation2 = _reservationService.Create(client1, offert10, 1250, new List<Guid> { room15 });
+        var reservation3 = _reservationService.Create(client2, offert5, 2100, new List<Guid> { room5 });
 
 
         _employeeService.Update(employee1, "Maks", "Chojnia", "00000000000", 1500);
