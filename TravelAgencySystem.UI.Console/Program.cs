@@ -49,6 +49,7 @@ PageManager.Pages = new()
     ["employee-profile"] = new ClientHome(),
 
     ["client-offerts"] = new ClientOffertList(reservationService, offertService, accomodationService, roomService, carrierService),
+    ["client-reservations"] = new ClientReservationList(reservationService, clientService, offertService, accomodationService, roomService, carrierService),
 
 };
 

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TravelAgencySystem.DataAccess.Memory")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c753d9fbdee528bb745fa1817eb8b2c450b5348c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4df155bb70b8e6f4d321bf8ab2c43d253e7d410")]
 [assembly: System.Reflection.AssemblyProductAttribute("TravelAgencySystem.DataAccess.Memory")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TravelAgencySystem.DataAccess.Memory")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -52,7 +52,5 @@ public class ClientOffertList : PageBase
     {
         Offert offert = _offertService.GetAll().SelectFromList();
         new ClientOffertDetails(offert.Id,_reservationService, _offertService, _accomodationService, _carrierService).Load();
-
-        Show();
     } 
 }

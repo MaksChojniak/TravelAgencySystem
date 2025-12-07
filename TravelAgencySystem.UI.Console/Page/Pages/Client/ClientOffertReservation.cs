@@ -18,7 +18,7 @@ public class ClientOffertReservation : PageBase
 
     protected override string Title 
     { 
-        get => "Offert Details";
+        get => "Reservation";
     }
     protected override Dictionary<char, Action?> Actions 
     { 
@@ -88,7 +88,19 @@ public class ClientOffertReservation : PageBase
         string input = (Console.ReadLine()??string.Empty).ToLower();
         if(input == "yes")
         {
-            _reservationService.Create(Session.PersonId, _offert.Id, totalPrice, rooms.Select(r => r.Id).ToList());
+            try
+            {
+                _reservationService.Create(Session.PersonId, _offert.Id, totalPrice, rooms.Select(r => r.Id).ToList());
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine();
+                PageExtension.ConsoleError($"{ex.Message}");
+                PageExtension.Pause();
+
+                PageManager.LoadPage("client-offerts");        
+            }
+            
             Console.WriteLine();
             Console.WriteLine("Reservation created successfully.");
             PageExtension.Pause();

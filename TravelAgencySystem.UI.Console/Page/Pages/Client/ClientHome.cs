@@ -12,7 +12,7 @@ public class ClientHome : PageBase
         {
             ['1'] = () => PageManager.LoadPage("client-offerts"),
             ['2'] = () => PageManager.LoadPage("client-reservations"),
-            ['2'] = () => PageManager.LoadPage("client-proile"),
+            ['3'] = () => PageManager.LoadPage("client-proile"),
             ['0'] = () => PageManager.LoadPage("menu"),
         };
     }

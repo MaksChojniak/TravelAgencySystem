@@ -86,7 +86,7 @@ public class ReservationService : IReservationService
         if(Get(id) is not Reservation reservation)
             throw new ArgumentException("Reservation is not exist", nameof(reservation));
 
-        foreach(var roomId in _rooms.Query().Where(r => r.Id == reservation.OffertId).Select(r => r.Id))
+        foreach(var roomId in _rooms.Query().Where(r => r.ReservationId == reservation.Id).Select(r => r.Id))
         {
             var room = _rooms.Get(roomId);
             room.IsAvailable = true;
